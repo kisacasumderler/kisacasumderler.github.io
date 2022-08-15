@@ -24,7 +24,7 @@
 }
 
 body {
-    background: var(--Dark-desaturated-blue);
+    background: var(--Very-dark-blue);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@ body {
 
 .card {
     width: 70%;
-    background: var(--Very-dark-blue);
+    background: var(--Dark-desaturated-blue);
     display: flex;
     flex-direction: row;
     justify-content: center;
