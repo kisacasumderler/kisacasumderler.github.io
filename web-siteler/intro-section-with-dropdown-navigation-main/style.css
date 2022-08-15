@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+    --fsize: 1.125rem;
+    --fepilogue: 'Epilogue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: var(--fepilogue);
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: var(--Almost-White);
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.satir .col-md-7 {
+    height: 60%;
+}
+
+.texts h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    width: 80%;
+}
+
+.texts p {
+    width: 70%;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: var(--Medium-Gray);
+}
+
+.buton a:hover {
+    background: transparent;
+    color: black;
+    transition: 0.5s;
+}
+
+.satir .my-auto {
+    position: relative;
+}
+
+.texts {
+    margin-bottom: 3rem;
+}
+
+.Register:hover {
+    background: black;
+}
+
+.rounded
+.dropdown-item svg {
+    margin-right: .5rem;
+    margin-top: -.1rem;
+}
+
+
+/* responsive */
+
+@media (max-width:1400px) {
+    .texts h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:1200px) {
+    
+.texts {
+    margin-bottom: 0rem;
+    gap: 1rem;
+}
+.texts h1 {
+    width: 100%;
+    font-size: 3rem;
+}
+.texts p {
+    width: 90%;
+    font-size: 1rem;
+}
+}
+
+@media (max-width:990px) {
+    .Login {
+        text-align: center;
+    }
+    .navbar .offcanvas-body {
+        position: relative;
+    }
+    
+    .LR-Container {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .LR-Container .nav-item a {
+        padding: 0.5rem 2rem;
+    }
+    .offcanvas-body {
+        text-align: center;
+    }
+    
+}
+
+@media (min-width:768px) {
+    .image-hero-mobile {
+        display: none;
+    }
+    body {
+        overflow: hidden;
+    }
+    .satir {
+        height: 100vh;
+    }
+}
+@media (max-width:768px) {
+    .imgage-hero-desktop {
+        display: none;
+    }
+    .container-m {
+        margin: 20% 0%;
+    }
+    .satir {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .texts {
+        margin: 20% 0%;
+        text-align: center;
+    }
+    .texts p {
+        width: 100%;
+    }
+}
