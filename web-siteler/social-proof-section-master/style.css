@@ -150,6 +150,9 @@
 
 footer {
     background: var(--Very-Dark-Magenta);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .attribution {
