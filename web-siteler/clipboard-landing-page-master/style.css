@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.row-p {
+    margin: 5% 10%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.butongroup {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.butongroup div:nth-child(1),
+.butongroup div:nth-child(2) {
+    background: var(--Strong-Cyan);
+    padding: 1.3% 4%;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.butongroup div:nth-child(1) {
+    box-shadow: 1px 1px 1px 1px hsl(171, 76%, 31%);
+}
+
+.butongroup div:nth-child(1):hover {
+    background: hsl(171, 75%, 53%);
+    transition: 0.5s;
+}
+
+.butongroup div:nth-child(2):hover {
+    background: hsl(233, 62%, 68%);
+}
+
+.butongroup div a {
+    color: white;
+}
+
+.butongroup div:nth-child(2) {
+    background: var(--Light-Blue);
+    box-shadow: 1px 1px 1px 1px hsl(233, 61%, 52%);
+}
+
+.row h1 {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+}
+
+.header .row .col p {
+    width: 70%;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+
+.secitonone p {
+    width: 45%;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+
+.secitonone .container {
+    margin-top: 5%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--Dark-Grayish-Blue);
+}
+
+p {
+    color: var(--Grayish-Blue);
+}
+
+section:nth-child(3) .col img {
+    width: 100%;
+    height: 100%;
+}
+
+section:nth-child(3) .row {
+    margin: 5% 0%;
+    gap: 5rem;
+}
+
+section:nth-child(3) .colrigth .row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+section:nth-child(3) .colrigth .row .col {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+section:nth-child(3) .colrigth .row .col p {
+    width: 55%;
+}
+
+.sectiontwo .col p {
+    width: 80%;
+    text-align: center;
+}
+
+.row-m {
+    margin: 3% 0%;
+}
+
+.row-m .col img {
+    width: 100%;
+}
+
+.sectionthree .container .row:nth-child(2) {
+    flex-direction: column;
+}
+
+.sectionthree .row-p .col {
+    margin: 5%;
+}
+
+.logos .col img {
+    width: 100%;
+}
+
+.logos {
+    gap: 5rem;
+}
+
+footer .container {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3% 0%;
+}
+
+.footerrow1 .col {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footerrow1 img {
+    width: 3rem;
+}
+.footerrow1 {
+    gap: 5rem;
+}
+footer {
+    padding: 5% 0%;
+    background: hsl(0, 0%, 92%);
+    color: var(--Dark-Grayish-Blue);
+    position: relative;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-size: 0.8rem;
+    background: var(--Strong-Cyan);
+    width: 100%;
+    text-align: center;
+    color: var(--Light-Blue);
+} 
+
+
+.attribution a {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.footerrow2 {
+    width: 50%;
+}
+
+/* responsive */ 
+
+
+@media (max-width:1200px) {
+    section:nth-child(3) .colrigth .row .col p {
+        width: 65%;
+    }
+    .logos {
+        gap: 3rem;
+    }
+    .secitonone p {
+        width: 55%;
+    }
+    .footerrow1 {
+        gap: 3rem;
+    }
+}
+
+@media (max-width:990px) {
+    section:nth-child(3) .colrigth .row .col p {
+        width: 80%;
+    }
+    .logos .col {
+       padding: 0.5rem;
+    }
+    .logos {
+        gap: 1rem;
+    }
+    .secitonone p {
+        width: 80%;
+    }
+    .footerrow1 {
+        gap: 3rem;
+    }
+    footer .container {
+        margin: 10% 0%;
+    }
+    .footerrow1 {
+        gap: 1rem;
+    }
+}
+
+@media (min-width:792px) {
+    header {
+        background-image: url("images/bg-header-desktop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (max-width:790px){
+    header {
+        background-image: url("images/bg-header-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row h1 {
+        font-size: 2.3rem;
+    }
+    .header .row .col p {
+        width: 90%;
+    }
+    .butongroup {
+        flex-direction: column;
+    }
+    .butongroup div {
+        width: 75%;
+        text-align: center;
+    }
+    .secitonone p {
+        width: 95%;
+    }
+
+    section:nth-child(3) .colrigth .row .col {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .colrightp {
+        width: 100%;
+        text-align: center;
+    }
+    section:nth-child(3) .colrigth .row .col p {
+        width: 100%;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerrow2 {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:600px) {
+    .row h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .row h1 {
+        font-size: 1.3rem;
+    }
+    h2,h3 {
+        font-size: 1.3rem;
+    }
+    p {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .logos {
+        gap: 3rem;
+    }
+}
