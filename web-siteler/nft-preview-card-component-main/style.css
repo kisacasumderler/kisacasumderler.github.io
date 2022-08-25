@@ -216,6 +216,9 @@ footer span {
     width: 100%;
     padding: 3%;
     }
+    .col {
+        gap: 2rem;
+    }
     .container {
         padding: 10%;
     }
