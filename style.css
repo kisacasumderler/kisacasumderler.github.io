@@ -372,6 +372,15 @@ nav ul li a:hover {
     .Card {
         width: 90%;
     }
+    .kapsam {
+        width: 95%;
+    }
+    nav {
+        width: 90%;
+    }
+    .menuBar-Icon {
+        font-size: 10vw;
+    }
 }
 
 .rotate {
@@ -419,6 +428,8 @@ nav ul li a:hover {
 .open {
     display: flex;
     background-color: var(--Soft-red);
+    padding: 2rem 0;
+    border-radius: .5rem;
 }
 
 .Z_open {
