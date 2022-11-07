@@ -21,7 +21,7 @@ fetch("./Data.json")
 let HomePage = document.getElementById("HomePage");
 
 let ListData = (webPage, repo, preview, baslik, paragraf, preview_icon, github_icon) => {
-    HomePage.innerHTML += `<li class='Card'><div class='cardimg'><img src='${preview}'></div><div class='cardbody'>${baslik} ${paragraf}<div><a href='${webPage}' class='z-item'>${preview_icon}</a><a href='${repo}'>${github_icon}</a><b class='site'>Siteyi ziyaret et</b><b class='gith'>Github repoyu gör</b></div></div></li>`;
+    HomePage.innerHTML += `<li class='Card'><div class='cardimg'><img src='${preview}'></div><div class='cardbody'>${baslik} ${paragraf}<div><a href='${webPage}' class='z-item' onmouseover='M_Over(this)' onmouseout='M_out(this)'>${preview_icon}</a><a href='${repo}' onmouseover='M_Over(this)' onmouseout='M_out(this)'>${github_icon}</a></div></div></li>`;
 }
 
 
@@ -41,23 +41,23 @@ M_Icon.addEventListener("click", () => {
     }
 })
 
-let z_item = document.querySelectorAll(".z-item"),
-    site = document.querySelector(".site"),
+
+let site = document.querySelector(".site"),
     gith = document.querySelector(".gith");
 
-z_item.forEach((element, i) => {
-    element.addEventListener("mouseover", () => {
-        if (i === 0) {
-            site.classList.add("Z_open");
-        } else {
-            gith.classList.add("Z_open");
-        }
-    })
-    element.addEventListener("mouseout", () => {
-        if (i === 0) {
-            site.classList.remove("Z_open");
-        } else {
-            gith.classList.remove("Z_open");
-        }
-    })
-});
+
+function M_Over(deger){
+    if(deger.classList[0]) {
+        site.classList.add("Z_open");
+    }else {
+        gith.classList.add("Z_open");
+    }
+}
+
+function M_out(deger) {
+    if(deger.classList[0]) {
+        site.classList.remove("Z_open");
+    }else {
+        gith.classList.remove("Z_open");
+    } 
+}

@@ -117,6 +117,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .Card {
@@ -364,6 +366,12 @@ nav ul li a:hover {
     .profile {
         width: 40vw;
     }
+    .kapsam article ul {
+        gap: 1.5rem;
+    }
+    .Card {
+        width: 90%;
+    }
 }
 
 .rotate {
@@ -415,5 +423,6 @@ nav ul li a:hover {
 
 .Z_open {
     display: block;
+    z-index: 2;
 }
 
