@@ -1,8 +1,7 @@
-
 .kapsam article ul {
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 100%;
 }
 
@@ -31,7 +30,7 @@
     width: 100%;
     color: var(--Dark-grayish-blue);
     margin: 2rem 0;
-   
+
 }
 
 .Card .cardbody div {
@@ -51,3 +50,10 @@
     font-size: 2rem;
     margin-right: 1rem;
 }
+
+
+
+<li class="Card"><div class="cardimg"><img src="https://raw.githubusercontent.com/kisacasumderler/kisacasumderler.github.io/main/web-siteler/3-column-preview-card-component-main/preview/1.png"alt=""></div><div class="cardbody"><h1>Lorem ipsum dolor sit</h1><p>Lorem ipsum dolor,
+sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio,
+soluta vero debitis corrupti numquam libero.</p><div><a href="#"class="z-item"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a><a href="#"class="z-item"><i class="fa-brands fa-github"></i></a><b class="site">Siteyi ziyaret et</b><b class="gith">Github Repo'yu gör</b>
+</div></div></li>

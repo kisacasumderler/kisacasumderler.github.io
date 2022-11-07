@@ -1,0 +1,142 @@
+[
+    {
+        "id":"0",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/3-column-preview-card-component-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/3-column-preview-card-component-main/index.html",
+        "preview":"./github-page/1.png",
+        "baslik":"3 Columnn preview Card Component",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"1",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/Huddle/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/Huddle/index.html",
+        "preview":"github-page/1667827965718.png",
+        "baslik":"Huddle",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"2",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/clipboard-landing-page-master/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/clipboard-landing-page-master/index.html",
+        "preview":"./github-page/1667736457111.png",
+        "baslik":"Clippoard landing page",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"3",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/fylo-landing-page-with-two-column-layout-master/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/fylo-landing-page-with-two-column-layout-master/index.html",
+        "preview":"github-page/1667828498011.png",
+        "baslik":"Fylo Landing Page With Two Column Layout Master",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"4",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/intro-section-with-dropdown-navigation-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/intro-section-with-dropdown-navigation-main/index.html",
+        "preview":"./github-page/1667829336466.png",
+        "baslik":"intro-section-with-dropdown-navigation-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"5",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/news-homepage-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/news-homepage-main/index.html",
+        "preview":"./github-page/1667829622666.png",
+        "baslik":"news-homepage-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"6",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/nft-preview-card-component-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/nft-preview-card-component-main",
+        "preview":"./github-page/1667756451891.png",
+        "baslik":"nft-preview-card-component-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"7",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/order-summary-component-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/order-summary-component-main",
+        "preview":"./github-page/order-summary-component-main.png",
+        "baslik":"order-summary-component-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"8",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/qr-code-component-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/qr-code-component-main",
+        "preview":"./github-page/1667835684542.png",
+        "baslik":"qr-code-component-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"9",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/social-proof-section-master/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/social-proof-section-master",
+        "preview":"./github-page/1667835774376.png",
+        "baslik":"social-proof-section-master",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"10",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/space-tourism-website-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/space-tourism-website-main",
+        "preview":"./github-page/1667836084356.png",
+        "baslik":"space-tourism-website-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"11",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/stats-preview-card-component-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/stats-preview-card-component-main",
+        "preview":"./github-page/1667836168050.png",
+        "baslik":"stats-preview-card-component-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"12",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/sunnyside-agency-landing-page-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/sunnyside-agency-landing-page-main",
+        "preview":"./github-page/1667836287517.png",
+        "baslik":"sunnyside-agency-landing-page-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":"13",
+        "webpage":"https://kisacasumderler.github.io/web-siteler/testimonials-grid-section-main/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/testimonials-grid-section-main",
+        "preview":"./github-page/1667836398525.png",
+        "baslik":"testimonials-grid-section-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    }
+]
