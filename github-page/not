@@ -1,0 +1,53 @@
+
+.kapsam article ul {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    max-width: 100%;
+}
+
+.kapsam article ul li {
+    width: 100%;
+    background: var(--Off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.069);
+}
+
+.kapsam article ul li img {
+    width: 100%;
+}
+
+.Card h1 {
+    color: var(--Very-dark-blue);
+    font-size: 1.5vw;
+}
+
+.Card .cardbody p {
+    width: 100%;
+    color: var(--Dark-grayish-blue);
+    margin: 2rem 0;
+   
+}
+
+.Card .cardbody div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--Very-dark-blue);
+    padding: 1rem;
+}
+
+.Card .cardbody div a {
+    color: var(--Grayish-blue);
+}
+
+.Card .cardbody div a i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}

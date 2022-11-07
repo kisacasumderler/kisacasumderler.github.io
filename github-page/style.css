@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    /* Colors */
+    /* Primary */
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    /* Neutral */
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    /* Typography */
+    --Font-size: 1rem;
+    /* (paragraph) */
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: var(--Font-size);
+    font-family: var(--font-family);
+}
+
+.AnaKapsam {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Off-white);
+}
+
+.AnaKapsam header {
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.273);
+
+}
+
+.AnaKapsam header .row:nth-child(1) {
+    width: 100%;
+    height: 15vw;
+    background: url("./images/logom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.AnaKapsam header .row:nth-child(2) {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5rem;
+    margin-top: -5vw;
+    padding: 2rem 0;
+}
+
+.profile {
+    width: 20vw;
+    border-radius: 50%;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--Off-white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.273);
+}
+
+.pText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pText h1 {
+    font-size: 1.5vw;
+    color: var(--Very-dark-blue);
+    letter-spacing: .025rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.pText h1:hover {
+    color: var(--Soft-red);
+}
+
+.pText p {
+    color: var(--Dark-grayish-blue);
+    letter-spacing: .025rem;
+    width: 60%;
+    font-size: 1vw;
+}
+
+.kapsam {
+    width: 80%;
+    margin: 5vw 0;
+}
+
+.kapsam article {
+    width: 100%;
+}
+
+.kapsam article ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.Card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.069);
+    gap: 2rem;
+    padding: 1rem;
+    animation-delay: inherit;
+    animation: Gecikme .5s infinite;
+    animation-iteration-count: 1;
+}
+
+.Card img {
+    width: 100%;
+    height: 100%;
+}
+
+.Card .cardbody {
+    width: 100%;
+    /* position: relative; */
+}
+
+.Card .cardbody h1 {
+    color: var(--Very-dark-blue);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    padding: 1rem;
+}
+
+.Card .cardbody p {
+    color: var(--Dark-grayish-blue);
+}
+
+.Card .cardbody div {
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid var(--Very-dark-blue);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.157);
+}
+
+.Card .cardbody div a {
+    color: var(--Very-dark-blue);
+    transition: .3s ease-in;
+}
+
+.Card .cardbody div a:hover {
+    color: var(--Soft-red);
+    animation: Zhover .3s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.site, .gith {
+    position: fixed;
+    font-size: 1rem;
+    left: 50%;
+    top: 5%;
+    background: var(--Off-white);
+    padding: .7rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.161);
+    transform: translateX(-50%);
+    display: none;
+}
+
+.Card .cardbody div i {
+    font-size: 2vw;
+}
+
+.Card .cardbody span {
+    color: var(--Soft-orange);
+}
+
+/* footer  */
+
+footer {
+    background: var(--Very-dark-blue);
+    width: 100%;
+    padding: 1rem 0;
+    animation: Gecikme .5s infinite;
+    animation-iteration-count: 1;
+}
+
+.social {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social i {
+    font-size: 2vw;
+    color: var(--Grayish-blue);
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+
+.social i:hover {
+    animation: Zhover .3s infinite;
+    animation-iteration-count: 1;
+    color: var(--Soft-orange);
+}
+
+/* nav  */
+
+nav {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid var(--Soft-red);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+nav ul li a {
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    padding: .6rem 2rem;
+    border-radius: .1rem;
+    transition: .3s ease-in;
+    letter-spacing: .075rem;
+    border-bottom: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: var(--Very-dark-blue);
+    border-bottom: 1px solid var(--Off-white);
+
+}
+
+.menuBar-Icon {
+    font-size: 5vw;
+    color: var(--Very-dark-blue);
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive  */
+
+@media(max-width:920px) {
+    .AnaKapsam header .row:nth-child(1) {
+        height: 35vw;
+    }
+
+    .AnaKapsam header .row:nth-child(2) {
+        margin-top: -8vw;
+        gap: 4rem;
+    }
+
+    .pText h1 {
+        font-size: 2vw;
+    }
+
+    .pText p {
+        font-size: 1.5vw;
+        width: 100%;
+        line-height: .95rem;
+    }
+
+    .profile {
+        width: 50vw;
+    }
+    .kapsam nav {
+        position: relative;
+        border: 0;
+    }
+    .navbg {
+        background: var(--Soft-red);
+    }
+    nav ul li {
+        background: var(--Soft-red);
+        padding: 1rem 0;
+        text-align: center;
+    }
+    nav ul li a {
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li a:hover {
+        background: none;
+    }
+    .MenuBar {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    .menuBar-Icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+    }
+    .Card .cardbody div i {
+        font-size: 5vw;
+    }
+}
+
+@media(max-width:600px) {
+    .AnaKapsam header .row:nth-child(2) {
+        margin-top: -14vw;
+        gap: 2rem;
+    }
+    .profile {
+        width: 100vw;
+    }
+    .social i {
+        font-size: 5vw;
+    }
+}
+
+@media(max-width:500px) {
+    .AnaKapsam header .row:nth-child(1) {
+        height: 70vw;
+    }
+    .AnaKapsam header .row:nth-child(2) {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: -40vw;
+    }
+    .pText h1 {
+        font-size: 4vw;
+    }
+    .pText p {
+        font-size: 3vw;
+        line-height: 1rem;
+    }
+    .profile {
+        width: 40vw;
+    }
+}
+
+.rotate {
+    animation: Dondur .5s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* keyframes  */
+
+@keyframes Zhover {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: -.5rem;
+    }
+}
+
+
+@keyframes Gecikme {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes Dondur{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+        color: var(--Soft-red);
+    }
+}
+
+/* script  */
+
+.open {
+    display: flex;
+    background-color: var(--Soft-red);
+}
+
+.Z_open {
+    display: block;
+}
+
