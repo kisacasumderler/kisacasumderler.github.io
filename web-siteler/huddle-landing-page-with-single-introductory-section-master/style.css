@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --font-headings: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    /* color  */
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--Violet);
+    box-sizing: border-box;
+}
+
+div, a, footer, span , h1 , p, img,i,b {
+    background: transparent;
+}
+
+/* scroll  */
+
+::-webkit-scrollbar {
+    width: 1rem;
+    background: white;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 1px 1px 5px var(--Violet);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--Soft-Magenta);
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Violet);
+    border: 1px solid white;
+}
+.r_oot {
+    width: 100%;
+    background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    display: flex;
+    flex-direction: column;
+}
+
+.r_oot nav {
+    width: 100%;
+    margin: 4vw 0;
+    padding-left: 3vw;
+    background: transparent;
+}
+
+nav svg {
+    width: 20vw;
+    background: transparent;
+}
+
+.kapsam {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 2.5% 0;
+}
+
+.kapsam img {
+    width: 50%;
+}
+
+.kapsam .icerik {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.kapsam h1 {
+    font-family: var(--font-headings);
+    color: white;
+    margin-top: 7%;
+    font-size: 3vw;
+    margin-bottom: 1rem;
+}
+
+.kapsam p {
+    font-weight: var(--font-body);
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.kapsam .icerik a {
+    font-family: var(--font-headings);
+    padding: 1vw 5vw;
+    background: white;
+    border-radius: 2rem;
+    font-size: 1.5vw;
+    box-shadow: -.5px 2px 10px rgba(0, 0, 0, 0.444);
+    transition: .3s ease;
+    text-align: center;
+}
+
+.kapsam .icerik a:hover {
+    background: var(--Soft-Magenta);
+    color: white;
+}
+
+.attribution,
+.attribution p,
+.attribution a {
+    background: transparent;
+    color: white;
+    letter-spacing: .025rem;
+}
+
+.attribution p,
+.attribution a {
+    font-size: .8rem;
+}
+
+.attribution a {
+    color: var(--Soft-Magenta);
+    transition: .3rem;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    background: transparent;
+}
+
+.icons a {
+    height: 3vw;
+    width: 3vw;
+    border: .1rem solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+    background: transparent;
+    padding: .3rem;
+}
+
+.icons a:hover {
+    border: .1rem solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+/* responsive */
+
+@media (min-width:990px) {
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background: var(--Violet);
+        text-align: center;
+        padding: .3rem 0;
+    }
+}
+
+@media(min-width:1400px) {
+    .kapsam {
+        gap: 4%;
+    }
+
+    .kapsam img {
+        width: 46%;
+    }
+
+    .kapsam .icerik {
+        width: 40%;
+    }
+
+    .kapsam .icerik a {
+        margin-top: 1rem;
+        font-size: 1.2vw;
+        padding: .8vw 4.5vw;
+    }
+
+    .kapsam p {
+        line-height: 1.8rem;
+    }
+
+    .icons a {
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+    .kapsam {
+        margin-top: 0;
+    }
+}
+
+@media(max-width:1200px) {
+    .kapsam {
+        margin-top: 5%;
+    }
+}
+
+@media(max-width:990px) {
+    .r_oot {
+        position: relative;
+        background-image: url("./images/bg-mobile.svg");
+    }
+
+    .kapsam {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kapsam img {
+        width: 80%;
+    }
+
+    .kapsam .icerik {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 10% 0;
+        margin-bottom: 5%;
+    }
+
+    .kapsam .icerik p,
+    .kapsam .icerik h1 {
+        text-align: center;
+    }
+
+    .kapsam .icerik a {
+        width: 20vw;
+        padding: 1vw 5vw;
+        font-size: 2vw;
+    }
+
+    .kapsam .icerik h1 {
+        font-size: 6vw;
+        margin-bottom: -.8rem;
+    }
+    footer {
+        padding: .8rem 0;
+    }
+    .icons a {
+        padding: 2vw;
+    }
+}
+
+
+@media(max-width:600px) {
+    .kapsam .icerik a {
+        font-size: 4vw;
+        width: 40vw;
+    }
+
+    .kapsam .icerik {
+        margin-bottom: 10%;
+    }
+    nav svg {
+        width: 40vw;
+        background: transparent;
+    }
+    .icons a {
+        padding: 3vw;
+    }
+}
+
+
+@media(max-width:400px) {
+    .kapsam .icerik {
+        margin-bottom: 20%;
+    }
+}
