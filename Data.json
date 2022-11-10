@@ -1,6 +1,6 @@
 [
     {
-        "id":"0",
+        "id":0,
         "webpage":"https://kisacasumderler.github.io/web-siteler/3-column-preview-card-component-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/3-column-preview-card-component-main/index.html",
         "preview":"./github-page/1.png",
@@ -10,7 +10,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"1",
+        "id":1,
         "webpage":"https://kisacasumderler.github.io/web-siteler/Huddle/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/Huddle/index.html",
         "preview":"github-page/1667827965718.png",
@@ -20,7 +20,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"2",
+        "id":2,
         "webpage":"https://kisacasumderler.github.io/web-siteler/clipboard-landing-page-master/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/clipboard-landing-page-master/index.html",
         "preview":"./github-page/1667736457111.png",
@@ -30,7 +30,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"3",
+        "id":3,
         "webpage":"https://kisacasumderler.github.io/web-siteler/fylo-landing-page-with-two-column-layout-master/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/fylo-landing-page-with-two-column-layout-master/index.html",
         "preview":"github-page/1667828498011.png",
@@ -40,7 +40,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"4",
+        "id":4,
         "webpage":"https://kisacasumderler.github.io/web-siteler/intro-section-with-dropdown-navigation-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/intro-section-with-dropdown-navigation-main/index.html",
         "preview":"./github-page/1667829336466.png",
@@ -50,7 +50,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"5",
+        "id":5,
         "webpage":"https://kisacasumderler.github.io/web-siteler/news-homepage-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/blob/main/web-siteler/news-homepage-main/index.html",
         "preview":"./github-page/1667829622666.png",
@@ -60,7 +60,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"6",
+        "id":6,
         "webpage":"https://kisacasumderler.github.io/web-siteler/nft-preview-card-component-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/nft-preview-card-component-main",
         "preview":"./github-page/1667756451891.png",
@@ -70,7 +70,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"7",
+        "id":7,
         "webpage":"https://kisacasumderler.github.io/web-siteler/order-summary-component-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/order-summary-component-main",
         "preview":"./github-page/order-summary-component-main.png",
@@ -80,7 +80,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"8",
+        "id":8,
         "webpage":"https://kisacasumderler.github.io/web-siteler/qr-code-component-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/qr-code-component-main",
         "preview":"./github-page/1667835684542.png",
@@ -90,7 +90,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"9",
+        "id":9,
         "webpage":"https://kisacasumderler.github.io/web-siteler/social-proof-section-master/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/social-proof-section-master",
         "preview":"./github-page/1667835774376.png",
@@ -100,7 +100,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"10",
+        "id":10,
         "webpage":"https://kisacasumderler.github.io/web-siteler/space-tourism-website-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/space-tourism-website-main",
         "preview":"./github-page/1667836084356.png",
@@ -110,7 +110,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"11",
+        "id":11,
         "webpage":"https://kisacasumderler.github.io/web-siteler/stats-preview-card-component-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/stats-preview-card-component-main",
         "preview":"./github-page/1667836168050.png",
@@ -120,7 +120,7 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"12",
+        "id":12,
         "webpage":"https://kisacasumderler.github.io/web-siteler/sunnyside-agency-landing-page-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/sunnyside-agency-landing-page-main",
         "preview":"./github-page/1667836287517.png",
@@ -130,11 +130,21 @@
         "github_icon":"fa-brands fa-github"
     },
     {
-        "id":"13",
+        "id":13,
         "webpage":"https://kisacasumderler.github.io/web-siteler/testimonials-grid-section-main/index.html",
         "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/testimonials-grid-section-main",
         "preview":"./github-page/1667836398525.png",
         "baslik":"testimonials-grid-section-main",
+        "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
+        "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
+        "github_icon":"fa-brands fa-github"
+    },
+    {
+        "id":14,
+        "webpage":"https://kisacasumderler.github.io/web-siteler/huddle-landing-page-with-single-introductory-section-master/index.html",
+        "repo":"https://github.com/kisacasumderler/kisacasumderler.github.io/tree/main/web-siteler/huddle-landing-page-with-single-introductory-section-master",
+        "preview":"./github-page/194823.png",
+        "baslik":"huddle-landing-page-with-single-introductory-section-master",
         "paragraph":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error quaerat aut laborum et distinctio, soluta vero debitis corrupti numquam libero.",
         "preview_icon":"fa-sharp fa-solid fa-arrow-up-right-from-square",
         "github_icon":"fa-brands fa-github"
