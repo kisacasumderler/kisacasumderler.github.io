@@ -1,12 +1,9 @@
 // data 
 
-function DataF(deger) {
-    console.log(deger);
-}
-
 fetch("./Data.json")
     .then((wPage) => wPage.json())
-    .then((data) => data.forEach((e) => {
+    .then((data) =>data.reverse())
+    .then((data) =>data.forEach((e) => {
         let id = e.id,
             webPage = e.webpage,
             repo = e.repo,
@@ -16,7 +13,7 @@ fetch("./Data.json")
             preview_icon = `<i class='${e.preview_icon}'></i>`,
             github_icon = `<i class='${e.github_icon}'></i>`;
         ListData(webPage, repo, preview, baslik, paragraf, preview_icon, github_icon);
-    }));
+    }))
 
 let HomePage = document.getElementById("HomePage");
 
