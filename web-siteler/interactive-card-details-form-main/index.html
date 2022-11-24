@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="./syle.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="CardContainer">
+    <div class="col card-col">
+      <div class="front">
+        <ul>
+          <li>
+            <div class="cardcircle"></div>
+            <div class="cardcircle"></div>
+          </li>
+          <li class="cardb">0000 0000 0000 0000</li>
+          <li>
+            <span class="cardb">Jane Appleseed</span>
+            <span><span class="cardb">00</span><span>/</span><span class="cardb">00</span></span>
+          </li>
+        </ul>
+      </div>
+      <card class="cardback">
+        <span class="cardb">000</span>
+      </card>
+    </div>
+    <div class="col">
+      <form method="post" id="cardform" name="cardform">
+        <ul>
+          <li><label for="C_name">Cardholder Name</label>
+            <input type="text" placeholder="Jane Appleseed" name="C_name" id="C_name" maxlength="50" >
+            <span class="inputtext">lorem</span>
+          </li>
+          <li><label for="C_number">Card Number</label>
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" name="C_number" id="C_number" maxlength="16" >
+            <span class="inputtext">error</span>
+          </li>
+          <li>
+            <div>
+              <label for="MM">Exp. Date (MM/YY)</label>
+              <span>
+                <div><input type="text" placeholder="MM" name="MM" id="MM" maxlength="2" >
+                  <span class="inputtext">lorem</span>
+                </div>
+                <div>
+                  <input type="text" placeholder="YY" name="YY" id="YY" maxlength="2" >
+                  <span class="inputtext">lorem</span>
+                </div>
+              </span>
+            </div>
+            <div><label for="cvc">CVC</label>
+              <input type="text" placeholder="e.g. 123" name="cvc" id="cvc" maxlength="3" >
+              <span class="inputtext">lorem</span>
+            </div>
+          </li>
+          <li><button id="Confirm">Confirm</button></li>
+        </ul>
+      </form>
+      <div class="succes" style="display: none!important;">
+        <div><i class="fa-solid fa-check"></i></div>
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button id="Continue">Continue</button>
+      </div>
+    </div>
+  </header>
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/kisacasumderler">Sümeyya Utku | @kisacasumderler</a>.
+    </div>
+  </footer>
+  <script src="./Script.js"></script>
+</body>
+
+</html>

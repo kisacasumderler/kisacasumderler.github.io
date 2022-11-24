@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+:root {
+    /* Colors */
+    /* Primary */
+    --Linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    /* active input border */
+    --Red: hsl(0, 100%, 66%);
+    /* input errors */
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    /* Typography */
+    /*  Body Copy */
+    --Fontsize: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: start;
+}
+
+.CardContainer {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.CardContainer .col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.CardContainer .front {
+    background: url("./images/bg-card-front.png");
+    align-self: flex-start;
+}
+
+.front ul li {
+    color: white;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+}
+
+.front ul li:first-child {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-bottom: 3rem;
+}
+
+.front ul li:nth-child(2) {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.front ul li:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+}
+
+.front .cardcircle:first-child {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: white;
+}
+
+.front .cardcircle:last-child {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+}
+
+.CardContainer .cardback {
+    background: url("./images/bg-card-back.png");
+    align-self: flex-end;
+}
+
+.CardContainer .front,
+.CardContainer .cardback {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    width: 25rem;
+    height: 13.5rem;
+}
+
+.cardback {
+    position: relative;
+}
+
+.cardback span {
+    position: absolute;
+    right: 3rem;
+    top: 49%;
+    transform: translateY(-50%);
+}
+
+/* col right  */
+
+.CardContainer .col:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardContainer form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.CardContainer form ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.CardContainer form ul li {
+    width: 100%;
+}
+
+.CardContainer form ul li:first-child,
+.CardContainer form ul li:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.CardContainer form ul li:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+}
+
+.CardContainer form ul li:nth-child(3) div {
+    width: 100%;
+}
+
+.CardContainer form ul li:nth-child(3) div:first-child span {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.CardContainer form ul li:nth-child(3) div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.CardContainer form ul li:nth-child(3) div:first-child span input,
+.CardContainer form ul li:nth-child(3) div:last-child input {
+    margin-top: .5rem;
+    max-width: 4rem;
+}
+
+.CardContainer form ul li:last-child,
+.CardContainer form ul li:last-child button {
+    width: 100%;
+}
+
+.CardContainer form ul li:last-child button {
+    height: 2.5rem;
+    padding: .5rem;
+    letter-spacing: .05rem;
+    background: var(--Very-dark-violet);
+    color: #fff;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+input {
+    height: 2.5rem;
+    border-radius: .2rem;
+    border: 2px solid var(--Dark-grayish-violet);
+    padding: .5rem;
+    letter-spacing: .1rem;
+}
+
+
+input[text]:focus {
+    border: outset 2px solid var(--Dark-grayish-violet);
+    box-shadow: 1px 1px 3px black;
+}
+
+/* form succes  */
+
+.succes {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+.succes div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.succes div i {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    background: var(--Linear-gradient);
+    color: white;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.succes h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: var(--Very-dark-violet);
+    margin-bottom: .5rem;
+}
+
+.succes p {
+    letter-spacing: 0.05rem;
+    color: var(--Dark-grayish-violet);
+    margin: 1rem;
+}
+
+.succes button {
+    width: 60%;
+    background: var(--Very-dark-violet);
+    color: var(--White);
+    height: 3rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    letter-spacing: .05rem;
+    cursor: pointer;
+}
+
+/* footer  */
+
+footer .attribution {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5rem;
+    background: var(--Light-grayish-violet);
+    color: var(--Dark-grayish-violet);
+    width: 100%;
+}
+
+footer .attribution a {
+    color: #000;
+    transition: .3s;
+}
+footer .attribution a:hover {
+    color: var(--Red);
+}
+/* responsive  */
+
+@media(max-width:1200px) {
+    .CardContainer {
+        width: 90vw;
+    }
+
+    .CardContainer .col:first-child {
+        width: 120%;
+    }
+
+    .CardContainer form {
+        width: 75%;
+    }
+}
+
+@media (max-width:990px) {
+    body {
+        background-size: cover;
+    }
+
+    .CardContainer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .CardContainer {
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .CardContainer .col:first-child {
+        width: 90%;
+        position: relative;
+        height: 40vh;
+    }
+
+    .CardContainer .col:last-child {
+        width: 100%;
+        background: var(--White);
+        min-height: 80vh;
+    }
+
+    .front {
+        position: absolute;
+        z-index: 1;
+        width: 1rem;
+        top: 22vh;
+        left: 10vw;
+    }
+
+    .cardback {
+        position: absolute;
+        top: 10vh;
+        right: 10vw;
+    }
+}
+
+@media(max-width:720px) {
+    .front {
+        left: 0;
+    }
+    .cardback {
+        right: 0;
+    }
+}
+
+@media(max-width:470px) {
+
+    .CardContainer .front,
+    .CardContainer .cardback {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 1rem;
+        width: 80vw;
+        height: 40vw;
+        border-radius: .5rem;
+        font-size: 3vw;
+    }
+
+    .front ul li:first-child {
+        margin-bottom: 6vw;
+    }
+
+    .front ul li:nth-child(2) {
+        font-size: 4vw;
+    }
+    .succes {
+        width: 80%;
+    }
+}
+
+@media(max-width:370px) {
+    body {
+        background-image: url("./images/bg-main-mobile.png");
+        background-position: top;
+    }
+
+    .front .cardcircle:first-child {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .front .cardcircle:last-child {
+        width: 5vw;
+        height: 5vw;
+    }
+    .succes {
+        width: 90%;
+    }
+}
+
+.inputtext {
+    color: transparent;
+}
