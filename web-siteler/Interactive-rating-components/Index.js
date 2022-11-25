@@ -15,15 +15,18 @@ const clear_e = (i)=>{
     })
 }
 
-form_item.forEach((e,i)=>{
-    if(i<5){
-        e.addEventListener("click",()=>{
+form_item.forEach((e, i) => {
+    if (i < 5) {
+        e.addEventListener("click", () => {
             clear_e();
-            e.style.background = "hsl(217, 12%, 63%)";
-            labels[i].style.color = "#fff";
+            for (let sayi = 0; sayi <= i; sayi++) {
+                form_item[sayi].style.background = "hsl(217, 12%, 63%)";
+                labels[sayi].style.color = "#fff";
+            }
         });
     }
 });
+
 
 formId.onsubmit = (event)=>{
     event.preventDefault();
