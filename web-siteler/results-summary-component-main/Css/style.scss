@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+// primary 
+$Lightred: hsl(0, 100%, 67%);
+$Orangeyyellow: hsl(39, 100%, 56%);
+$Greenteal: hsl(166, 100%, 37%);
+$Cobaltblue: hsl(234, 85%, 45%);
+
+// Gradients
+
+$LightslateBlueBG: hsl(252, 100%, 67%);
+$LightroyalBlueBG: hsl(241, 81%, 54%);
+
+$VioletblueCircle: hsla(256, 72%, 46%, 1);
+$PersianblueCircle: hsla(241, 72%, 46%, 0);
+
+// Neutral
+
+$White: hsl(0, 0%, 100%);
+$Paleblue: hsl(221, 100%, 96%);
+$Lightlavender: hsl(241, 100%, 89%);
+$Darkgrayblue: hsl(224, 30%, 27%);
+
+// Typography
+$FontSizeParagraph: 18px;
+$FontFamily : 'Hanken Grotesk', sans-serif;
+// font weight 500 700 800 
+
+@function PrimaryColor($val){
+    @if($val == "Reaction"){
+        @return $Lightred;
+    }
+    @else if($val == "Memory"){
+        @return $Orangeyyellow;
+    }
+    @else if($val == "Verbal"){
+        @return $Greenteal;
+    }
+    @else if($val == "Visual"){
+        @return $Cobaltblue;
+    }
+}
+
+@function PrimaryColorBG($val){
+    @if($val == "Reaction"){
+        @return lighten($color: $Lightred, $amount: 30);
+    }
+    @else if($val == "Memory"){
+        @return lighten($color: $Orangeyyellow, $amount: 35);
+    }
+    @else if($val == "Verbal"){
+        @return lighten($color: $Greenteal, $amount: 50);
+    }
+    @else if($val == "Visual"){
+        @return lighten($color: $Cobaltblue, $amount: 50);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: .05rem;
+    font-family: $FontFamily;
+}
+
+@mixin DisplayFlex(){
+    display: flex;
+}
+
+@mixin FlexCenterColumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin FlexCenterRow() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin useSelectNone() {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+    @include FlexCenterColumn();
+    width: 100%;
+    background: $Paleblue;
+    min-height: 100vh;
+
+    #WebCont {
+        display: flex;
+        column-gap: 1rem;
+        width: 45vw;
+        background: $White;
+        border-radius: 2rem;
+        box-shadow: -5px 5px 25px $Lightlavender;
+        .Result {
+            width: 100%;
+            border-radius: 2rem;
+            justify-self: stretch;
+            align-self: stretch;
+            background: linear-gradient(180deg, $LightslateBlueBG 0%, $LightroyalBlueBG 100%);
+            @include FlexCenterColumn();
+            justify-content: space-between;
+            padding: 3rem 2rem;
+            text-align: center;
+            gap: 3rem;
+            h1 {
+                color: $Lightlavender;
+                font-size: 22px;
+            }
+            .ResulCircle {
+                width: 15rem;
+                height: 15rem;
+                // border: 1px solid white;
+                border-radius: 100%;
+                background: linear-gradient(180deg, $VioletblueCircle 0%, $PersianblueCircle 100%);
+                @include FlexCenterColumn();
+                span:first-child {
+                    color: $White;
+                    font-size: 6rem;
+                    font-weight: 700;
+                }
+                span:last-child {
+                    color: $Lightlavender;
+                }
+            }
+            h2 {
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+                color: $White;
+            }
+            p {
+                color: $Lightlavender;
+            }
+        }
+        .ResultInf{
+            width: 100%;
+            justify-self: stretch;
+            align-self: stretch;
+            padding: 2rem;
+            @include FlexCenterColumn();
+            justify-content: space-between;
+            align-items: flex-start;
+            h1 {
+                color: $Darkgrayblue;
+            }
+            ul {
+                @include FlexCenterColumn();
+                gap: 1.5rem;
+                width: 100%;
+                .Reaction {
+                    color: PrimaryColor("Reaction");
+                    background: PrimaryColorBG("Reaction");
+                }
+                .Memory {
+                    color: PrimaryColor("Memory");
+                    background: PrimaryColorBG("Memory");
+                }
+                .Verbal {
+                    color: PrimaryColor("Verbal");
+                    background: PrimaryColorBG("Verbal");
+                }
+                .Visual {
+                    color: PrimaryColor("Visual");
+                    background: PrimaryColorBG("Visual");
+                }
+                li {
+                    @include FlexCenterRow();
+                    justify-content: space-between;
+                    gap: 1.5rem;
+                    width: 100%;
+                    padding: 1.1rem .8rem;
+                    border-radius: .5rem;
+                    font-weight: 500;
+                    font-size: 20px;
+                    span {
+                        width: 100%;
+                        b {
+                            color: $Darkgrayblue;
+                        }
+                        i {
+                            font-style: normal;
+                            color: $Lightlavender;
+                        }
+                    }
+                    span:last-child{
+                        text-align: end;
+                    }
+                }
+            }
+            div {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+        @include FlexCenterColumn();
+        text-align: center;
+        background: $Darkgrayblue;
+        border-radius: 1rem;
+        margin: 1rem;
+        box-shadow: -5px 5px 15px $PersianblueCircle;
+        transition: .2s ease-in;
+        animation-name: footerUp;
+        animation-duration: 2s;
+        animation-delay: -1s;
+        animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+        img {
+            width: 5rem;
+            border-radius: 100%;
+            margin-top: -20%;
+            margin-bottom: 5%;
+            box-shadow: -1px 3px 10px rgba(255, 255, 255, 0.185);
+            animation-name: imgBorder;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        img:hover {
+            animation-name: Objectrotate;
+            animation-iteration-count: 1;
+            animation-duration: 0.7s;
+            animation-direction: reverse;
+            cursor: pointer;
+        }
+        b {
+            color: $Orangeyyellow;
+            a {
+                color: $White;
+                transition: .4s ease-out;
+            }
+            a:visited {
+                color: $Lightred;
+            }
+            a:hover {
+                color: $Greenteal;
+            }
+        }
+    }
+}   
+
+
+.btn {
+    background: $Darkgrayblue;
+    color: $White;
+    text-align: center;
+    border-radius: 5rem;
+    padding: 1rem 0;
+    font-size: 20px;
+    letter-spacing: 0.07rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .4s ease-out;
+    @include useSelectNone();
+}
+
+.btn:hover {
+    background: linear-gradient(180deg, $LightslateBlueBG 0%, $LightroyalBlueBG 100%);
+}
+
+@media (max-width : 1300px) {
+    body {
+        #WebCont {
+        width: 80%;
+    }
+    }
+
+}
+
+@media (max-width : 720px) {
+    body {
+        #WebCont {
+            width: 100%;
+            background: $Paleblue;
+            @include FlexCenterColumn();
+            .Result {
+                border-radius: 0 0 5rem 5rem;
+            }
+            .ResultInf {
+                gap: 1.5rem;
+                ul {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        footer {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            gap: 1rem;
+            border-radius: 0;
+            img {
+                margin: 1rem;
+                padding: 0;
+                position: absolute;
+                left: 0;
+                width: 3rem;
+            }
+        }
+    }
+}
+
+@keyframes footerUp {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes imgBorder {
+    from {
+        border: 1px inset $Orangeyyellow;
+        box-shadow: -1px 3px 10px rgba(155, 127, 0, 0.534);
+    }
+    to {
+        border: 1px outset $Greenteal;
+        box-shadow: -1px 3px 10px rgba(0, 117, 101, 0.555);
+    }
+}
+
+@keyframes Objectrotate {
+    0% {
+      transform: rotate(0);
+      border: 3px solid white;
+    }
+    100% {
+      transform: rotate(360deg);
+      border: 3px solid $Darkgrayblue;
+    }
+  }
