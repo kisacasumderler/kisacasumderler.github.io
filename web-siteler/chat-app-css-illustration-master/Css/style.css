@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: hsl(270deg, 20%, 96%);
+  position: relative;
+  overflow-x: hidden;
+}
+body .leftbg {
+  background: linear-gradient(-130deg, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  width: 40%;
+  height: 90vh;
+  position: absolute;
+  left: -10%;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+body .rightbg {
+  background: linear-gradient(142deg, hsl(270deg, 20%, 96%), hsl(206deg, 6%, 79%));
+  position: absolute;
+  width: 40%;
+  height: 90vh;
+  right: -10%;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  z-index: -1;
+}
+body main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 1400px;
+  z-index: 2;
+}
+body main .phone {
+  width: 380px;
+  background: hsl(270deg, 20%, 96%);
+  height: 723.75px;
+  border: 15px solid hsl(0deg, 0%, 100%);
+  border-radius: 2.5rem;
+  box-shadow: 5px 5px 500px rgba(0, 0, 0, 0.089);
+  position: relative;
+}
+body main .phone .handset {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1.5rem;
+  z-index: 3;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 0 0 1rem 1rem;
+}
+body main .phone .messageForm {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: white;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .phone .messageForm input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+}
+body main .phone .messageForm :-ms-input-placeholder {
+  color: hsl(206deg, 6%, 79%);
+}
+body main .phone .messageForm button {
+  width: 3rem;
+  height: 2.5rem;
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  background: hsl(271deg, 36%, 24%);
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+body main .phone .screenTop {
+  gap: 0.8rem;
+  background-image: linear-gradient(-130deg, hsl(293deg, 100%, 63%), hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  padding-top: 2.5rem;
+  border-radius: 2rem 2rem 0.5rem 0.5rem;
+  width: 100%;
+  z-index: 2;
+}
+body main .phone .screenTop .leftarrow {
+  color: hsl(0deg, 0%, 100%);
+}
+body main .phone .screenTop div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+}
+body main .phone .screenTop div img {
+  width: 2.5rem;
+  border-radius: 100%;
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+body main .phone .screenTop div h1 {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main .phone .screenTop div h1 span {
+  font-size: 18px;
+  font-weight: 700;
+}
+body main .phone .screenTop div h1 b {
+  font-weight: 100;
+  font-size: 14px;
+  color: hsl(276deg, 100%, 81%);
+}
+body main .phone .screenTop .dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0deg, 0%, 100%);
+  line-height: 0.4rem;
+}
+body main .phone .screenTop .dots i {
+  font-weight: 700;
+}
+body main .phone .screenBottom {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+body main .phone .screenBottom li {
+  max-width: 70%;
+  margin-top: 0.6rem;
+  font-size: 13px;
+  font-weight: lighter;
+  padding: 0.6rem;
+}
+body main .phone .screenBottom li {
+  opacity: 0;
+}
+body main .phone .screenBottom li:nth-child(1) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 0.5s;
+}
+body main .phone .screenBottom li:nth-child(2) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 2s;
+}
+body main .phone .screenBottom li:nth-child(3) {
+  opacity: 1;
+}
+body main .phone .screenBottom li:nth-child(3) img {
+  opacity: 0;
+}
+body main .phone .screenBottom li:nth-child(3) img:nth-child(1) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 4.5s;
+}
+body main .phone .screenBottom li:nth-child(3) img:nth-child(2) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 5.5s;
+}
+body main .phone .screenBottom li:nth-child(3) img:nth-child(3) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 6.5s;
+}
+body main .phone .screenBottom li:nth-child(4) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 7s;
+}
+body main .phone .screenBottom li:nth-child(5) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 10.5s;
+}
+body main .phone .screenBottom li:nth-child(6) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 13.5s;
+}
+body main .phone .screenBottom li:nth-child(7) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 17s;
+}
+body main .phone .screenBottom li:nth-child(8) {
+  animation-name: uploadMsg;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-delay: 20.5s;
+}
+body main .phone .screenBottom .IncomingMsg {
+  background: #e9e3ed;
+  color: hsl(276deg, 55%, 52%);
+  justify-self: start;
+  margin-left: 1rem;
+  border-radius: 1.5rem 1.5rem 1.5rem 0.2rem;
+}
+body main .phone .screenBottom .sendMsg {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(271deg, 36%, 24%);
+  justify-self: end;
+  margin-right: 1rem;
+  border-radius: 1.5rem 1.5rem 0.2rem 1.5rem;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.021);
+}
+body main .phone .screenBottom .messageImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  box-shadow: none;
+}
+body main .phone .screenBottom .messageImg img {
+  width: 4rem;
+  border-radius: 1rem;
+}
+body main .phone .screenBottom .jobInf {
+  background: linear-gradient(90deg, hsl(293deg, 100%, 63%), hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  color: hsl(270deg, 20%, 96%);
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .phone .screenBottom .jobInf div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+body main .phone .screenBottom .jobInf div span:first-child {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid hsl(289deg, 100%, 72%);
+  border-radius: 50%;
+}
+body main .phone .screenBottom .jobInf .Price {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 100%);
+}
+body main .pdiv {
+  width: 50%;
+  text-align: start;
+}
+body main .pdiv h1 {
+  color: hsl(271deg, 36%, 24%);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+body main .pdiv p {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: hsl(270deg, 7%, 64%);
+}
+
+@media ((max-width: 1500px) and (min-width: 720px)) {
+  body .leftbg {
+    border-radius: 0 0 30rem 30rem;
+    left: -15%;
+  }
+  body .rightbg {
+    border-radius: 30rem 30rem 0 0;
+    right: -15%;
+  }
+  body main {
+    width: 70vw;
+    justify-content: space-between;
+  }
+  body main .phone {
+    width: 350px;
+    height: 627.25px;
+  }
+  body main .phone .handset {
+    height: 1rem;
+    border-radius: 0 0 0.6rem 0.6rem;
+  }
+  body main .phone .screenTop {
+    padding: 0.6rem;
+    padding-top: 1.5rem;
+  }
+  body main .phone .screenBottom li {
+    font-size: 10px;
+  }
+  body main .phone .screenBottom .messageImg {
+    padding: 0;
+  }
+  body main .phone .screenBottom .messageImg img {
+    width: 3rem;
+  }
+  body main .pdiv {
+    width: 60%;
+  }
+  body main .pdiv h1 {
+    font-size: 2.5rem;
+  }
+  body main .pdiv p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 1300px) {
+  body main {
+    width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  body main {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  body .leftbg {
+    border-radius: 0 0 30rem 30rem;
+    left: -50%;
+    height: 70vh;
+    width: 100%;
+  }
+  body .rightbg {
+    border-radius: 30rem 30rem 0 0;
+    right: -50%;
+    height: 70vh;
+    width: 100%;
+  }
+  body main {
+    margin: 15%;
+    width: 100%;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  body main .pdiv {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 410px) {
+  body main {
+    margin: 25% 0;
+  }
+  body main .phone {
+    width: 320px;
+    height: 627.25px;
+  }
+  body main .phone .handset {
+    height: 1rem;
+    border-radius: 0 0 0.6rem 0.6rem;
+  }
+  body main .phone .screenTop {
+    padding: 0.6rem;
+    padding-top: 1.5rem;
+  }
+  body main .phone .screenBottom li {
+    font-size: 10px;
+  }
+  body main .phone .screenBottom .messageImg {
+    padding: 0;
+  }
+  body main .phone .screenBottom .messageImg img {
+    width: 3rem;
+  }
+}
+@keyframes uploadMsg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
