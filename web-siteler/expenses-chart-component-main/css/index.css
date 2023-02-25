@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+p, span, ul, li, div b, i button a {
+  font-size: 18px;
+}
+
+body {
+  background: hsl(27, 66%, 92%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  width: 547px;
+}
+body main header {
+  height: 125px;
+  background: hsl(10, 79%, 65%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+body main header .balance {
+  color: hsl(33, 100%, 98%);
+}
+body main header .balance span {
+  font-size: 16px;
+}
+body main header .balance h1 {
+  font-size: 30px;
+}
+body main header .circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main header .circle .one {
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsl(33, 100%, 98%);
+  border-radius: 50%;
+  margin-right: -25%;
+  z-index: 2;
+}
+body main header .circle .two {
+  width: 40px;
+  height: 40px;
+  background: hsl(25, 47%, 15%);
+  border-radius: 50%;
+}
+body main section {
+  margin-top: 1.5rem;
+  background: hsl(33, 100%, 98%);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+body main section h2 {
+  font-size: 28px;
+  color: hsl(25, 47%, 15%);
+}
+body main section .sectionBody {
+  padding-top: 70px;
+}
+body main section .sectionBody .section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.8rem;
+  align-items: end;
+  width: 100%;
+}
+body main section .sectionBody .section1 div {
+  height: 300px;
+  background: hsl(10, 79%, 65%);
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+body main section .sectionBody .section1 div .percent {
+  background: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  padding: 0.5rem;
+  font-size: 24px;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: -55px;
+  left: -40%;
+  width: 180%;
+  z-index: 2;
+  text-align: center;
+  display: none;
+}
+body main section .sectionBody .section1 div:hover {
+  background: #f29e8d;
+}
+body main section .sectionBody .section1 div:hover .percent {
+  display: block;
+}
+body main section .sectionBody .section1 .today {
+  background: hsl(186, 34%, 60%);
+}
+body main section .sectionBody .section1 .today:hover {
+  background: #98c7cd;
+}
+body main section .sectionBody .section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.8rem;
+  align-items: end;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid hsl(27, 66%, 92%);
+}
+body main section .sectionBody .section2 span {
+  width: 100%;
+  text-align: center;
+  color: hsl(28, 10%, 53%);
+}
+body main section .sectionfooter {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+body main section .sectionfooter div:first-child {
+  text-align: start;
+}
+body main section .sectionfooter div:first-child h3 {
+  font-size: 14px;
+  font-weight: lighter;
+}
+body main section .sectionfooter div:first-child span {
+  font-size: 45px;
+  font-weight: bolder;
+  color: hsl(25, 47%, 15%);
+}
+body main section .sectionfooter div:last-child {
+  text-align: end;
+}
+body main section .sectionfooter div:last-child span {
+  color: hsl(25, 47%, 15%);
+  font-weight: bolder;
+}
+body main section .sectionfooter div:last-child h3 {
+  font-weight: lighter;
+  color: hsl(28, 10%, 53%);
+  font-size: 16px;
+}
+body footer {
+  color: hsl(25, 47%, 15%);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background: white;
+  border: 1rem 1rem 0 0;
+}
+body footer a {
+  color: hsl(10, 79%, 65%);
+  transition: 0.3s ease;
+}
+body footer a:hover {
+  color: hsl(186, 34%, 60%);
+}
+
+@media (max-width: 600px) {
+  body main {
+    width: 345px;
+  }
+  body main section {
+    padding: 1rem;
+  }
+  body main section h2 {
+    font-size: 22px;
+  }
+  body main section .sectionBody {
+    gap: 0.6rem;
+    padding-bottom: 1rem;
+  }
+  body main section .sectionBody .section1 div .percent {
+    font-size: 20px;
+    width: 250%;
+    left: -70%;
+  }
+  body main section .sectionfooter div:first-child span {
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=index.css.map */

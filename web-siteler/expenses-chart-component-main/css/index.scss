@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+// Colors // Primary
+
+$SoftRed: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+
+// Neutral
+
+$DarkBrown: hsl(25, 47%, 15%);
+$MediumBrown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$VeryPaleOrange: hsl(33, 100%, 98%);
+
+// Typography / Body Copy
+
+$FontSize: 18px;
+$FontFamily: 'DM Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: .05rem;
+    font-family: $FontFamily;
+}
+
+p, span, ul, li, div b, i button a {
+    font-size: $FontSize;
+}
+
+@mixin DFlex($val:0,$val2:0, $val3:0){
+    display: flex;
+    @if($val==0){
+        flex-direction: column;
+    }
+    @else if($val==1){
+        flex-direction: row;
+    }
+    @else if($val==2){
+        flex-direction: column-reverse;
+    }
+    @else if($val==4){
+        flex-direction: row-reverse;
+    }
+    @if($val2==0){
+        justify-content: center;
+    }
+    @else if($val2==1){
+        justify-content: flex-start;
+    }
+    @else if($val2==2){
+        justify-content: flex-end;
+    }
+    @if($val3==0){
+        align-items: center;
+    }
+    @else if($val3==1){
+        align-items: flex-start;
+    }
+    @else if($val3==2){
+        align-items: flex-end;
+    }
+}
+
+@mixin useSelectNone() {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@mixin dgrid() {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .8rem;
+    align-items: end;
+    width: 100%;
+}
+
+body {
+    background: $Cream;
+    min-height: 100vh;
+    @include DFlex();
+    main {
+        width: 547px;
+        header {
+            height: 125px;
+            background: $SoftRed;
+            border-radius: 1rem;
+            @include DFlex(1);
+            justify-content: space-between;
+            padding: 0 2rem;
+            .balance {
+                color: $VeryPaleOrange;
+                span {
+                    font-size: 16px;
+                }
+                h1 {
+                    font-size: 30px;
+                }
+            }
+            .circle {
+                @include DFlex(1);
+                .one {
+                    width: 40px;
+                    height: 40px;
+                    border: 2px solid $VeryPaleOrange;
+                    border-radius: 50%;
+                    margin-right: -25%;
+                    z-index: 2;
+                }
+                .two {
+                    width: 40px;
+                    height: 40px;
+                    background: $DarkBrown;
+                    border-radius: 50%;
+                }
+            }
+        }
+        section {
+            margin-top: 1.5rem;
+            background: $VeryPaleOrange;
+            border-radius: 1rem;
+            padding: 2rem;
+            h2 {
+                font-size: 28px;
+                color: $DarkBrown;
+            }
+            .sectionBody {
+                padding-top: 70px;
+                .section1 {
+                    @include dgrid();
+                div {
+                    height: 300px;
+                    background: $SoftRed;
+                    border-radius: .5rem;
+                    position: relative;
+                    cursor: pointer;
+                    transition: .5s ease;
+                .percent {
+                    background: $DarkBrown;
+                    color: $VeryPaleOrange;
+                    padding: .5rem;
+                    font-size: 24px;
+                    border-radius: .5rem;
+                    position: absolute;
+                    top: -55px;
+                    left: -40%;
+                    width: 180%;
+                    z-index: 2;
+                    text-align: center;
+                    display: none;
+                }
+                }
+                div:hover {
+                    background: lighten($color: $SoftRed, $amount: 10);
+                }
+                div:hover .percent {
+                    display: block;
+                }
+                .today {
+                    background: $Cyan;
+                }
+                .today:hover {
+                    background: lighten($color: $Cyan, $amount: 10);
+                }
+                }
+                .section2 {
+                    @include dgrid();
+                    padding-bottom: 1.5rem;
+                    border-bottom: 1px solid $Cream;
+                    span {
+                        width: 100%;
+                        text-align: center;
+                        color: $MediumBrown;
+                    }
+                }
+
+            }
+            .sectionfooter {
+                margin-top: 1rem;
+                @include DFlex(1);
+                justify-content: space-between;
+                width: 100%;
+                div:first-child {
+                    text-align: start;
+                h3 {
+                    font-size: 14px;
+                    font-weight: lighter;
+                }
+                span {
+                    font-size: 45px;
+                    font-weight: bolder;
+                    color: $DarkBrown;
+                }
+                }
+                div:last-child {
+                    text-align: end;
+                    span {
+                        color: $DarkBrown;
+                        font-weight: bolder;
+                    }
+                    h3 {
+                        font-weight: lighter;
+                        color: $MediumBrown;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        color: $DarkBrown;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: .5rem;
+        background: white;
+        border: 1rem 1rem 0 0;
+        a {
+            color: $SoftRed;
+            transition: .3s ease;
+        }
+        a:hover {
+            color: $Cyan;
+        }
+    }
+}
+
+@media(max-width:600px){
+    body {
+        main {
+            width: 345px;
+            section {
+                padding: 1rem;
+                h2 {
+                    font-size: 22px;
+                }
+                .sectionBody {
+                    gap: .6rem;
+                    padding-bottom: 1rem;
+                    .section1 {
+                        div {
+                            .percent {
+                                font-size: 20px;
+                                width: 250%;
+                                left: -70%;
+                            }
+                        }
+                    }
+                }
+                .sectionfooter {
+                    div:first-child {
+                    span {
+                        font-size: 35px;
+                    }
+                    }
+                }                
+            }
+        }
+    }
+}
