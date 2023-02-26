@@ -26,7 +26,6 @@ fetch("data.json")
         }
 
         let divHeigt = (Math.ceil(amount)) * 3;
-        console.log(divHeigt);
         
         let dayHTML = dayElementsFunc(day);
         let amountHTML = amountElementsFunc(amount,dayClass,divHeigt);
