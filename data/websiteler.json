@@ -1,0 +1,228 @@
+[
+{
+    "type": "header",
+    "version": "5.2.0",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "githubprofile"
+},
+{
+    "type": "table",
+    "name": "websiteler",
+    "database": "githubprofile",
+    "data": 
+[
+{
+    "id": "1",
+    "baslik": "Sunnyside agency landing page",
+    "aciklama": "This is a solution for my frontendmentor challange",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/sunnyside-agency-landing-page-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/sunnyside-agency-landing-page-main",
+    "imgName": ".\/img\/a53ed8e86feac38230b2b573e.webp"
+},
+{
+    "id": "2",
+    "baslik": "Huddle landing page with curved sections",
+    "aciklama": "This is a solution for Huddle landing page with curved sections",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/huddle-landing-page-with-curved-sections-master",
+    "imgName": ".\/img\/3880338b8476366f3f78cbe4e.webp"
+},
+{
+    "id": "3",
+    "baslik": "Product preview card component",
+    "aciklama": "This is a solution for @kisacasumderler",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/product-preview-card-component-main-challenge",
+    "imgName": ".\/img\/ee503d47f23b54baab9f7f710.webp"
+},
+{
+    "id": "4",
+    "baslik": "Fylo landing page with two column layout",
+    "aciklama": "This is a solution for @kisacasumderler",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/fylo-landing-page-with-two-column-layout-master\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/fylo-landing-page-with-two-column-layout-master",
+    "imgName": ".\/img\/b095295a398d68e22a1e78551.webp"
+},
+{
+    "id": "5",
+    "baslik": "3-column preview card component",
+    "aciklama": "This is a solution for @kisacasumderler",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/3-column-preview-card-component-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/3-column-preview-card-component-main",
+    "imgName": ".\/img\/94f2a33b2912c8c7e05899643.webp"
+},
+{
+    "id": "6",
+    "baslik": "Stats preview card component",
+    "aciklama": "This is a solution for Stats preview card component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/stats-preview-card-component-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/stats-preview-card-component-main",
+    "imgName": ".\/img\/087e8e34fa6121bd6548ae50c.webp"
+},
+{
+    "id": "7",
+    "baslik": "QR code component",
+    "aciklama": "This is a solution for QR code component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/qr-code-component-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/qr-code-component-main",
+    "imgName": ".\/img\/64b49789e0702d10936db16d7.webp"
+},
+{
+    "id": "8",
+    "baslik": "Clipboard landing page",
+    "aciklama": "This is a solution for Clipboard landing page",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/clipboard-landing-page-master\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/clipboard-landing-page-master",
+    "imgName": ".\/img\/5b0d947c913fdb51b8669cf64.webp"
+},
+{
+    "id": "9",
+    "baslik": "Intro section with dropdown navigation",
+    "aciklama": "This is a solution for Intro section with dropdown navigation",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/intro-section-with-dropdown-navigation-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/intro-section-with-dropdown-navigation-main",
+    "imgName": ".\/img\/2311e1899ef0b6af56ea2c4ad.webp"
+},
+{
+    "id": "10",
+    "baslik": "Social proof section",
+    "aciklama": "This is a solution for Social proof section",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/social-proof-section-master\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/social-proof-section-master",
+    "imgName": ".\/img\/689a1797ad3eb532ec05839ab.webp"
+},
+{
+    "id": "11",
+    "baslik": "Testimonials grid section",
+    "aciklama": "This is a solution for Testimonials grid section",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/testimonials-grid-section-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/testimonials-grid-section-main",
+    "imgName": ".\/img\/f57cd513d91753d4c6bd3bc7b.webp"
+},
+{
+    "id": "12",
+    "baslik": "Order summary component",
+    "aciklama": "This is a solution for Order summary component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/order-summary-component-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/order-summary-component-main",
+    "imgName": ".\/img\/68cc99279da38088cc445ef37.webp"
+},
+{
+    "id": "13",
+    "baslik": "NFT preview card component",
+    "aciklama": "This is a solution for NFT preview card component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/nft-preview-card-component-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/nft-preview-card-component-main",
+    "imgName": ".\/img\/43099d2a632bb33945bd138db.webp"
+},
+{
+    "id": "14",
+    "baslik": "Space tourism multi-page website",
+    "aciklama": "This is a solution for",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/space-tourism-website-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/space-tourism-website-main",
+    "imgName": ".\/img\/30cbf77bcc2160dae78da8095.webp"
+},
+{
+    "id": "15",
+    "baslik": "News homepage",
+    "aciklama": "This is a solution for News homepage",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/news-homepage-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/news-homepage-main",
+    "imgName": ".\/img\/9f74edf9541ddc9e3e44695ed.webp"
+},
+{
+    "id": "16",
+    "baslik": "Loopstudios landing page",
+    "aciklama": "This is a solution for Loopstudios landing page",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/loopstudios-landing-page-main\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/loopstudios-landing-page-main",
+    "imgName": ".\/img\/cbc46531feff04253c4f563f2.webp"
+},
+{
+    "id": "17",
+    "baslik": "Huddle landing page with a single introductory section",
+    "aciklama": "This is a solution for Huddle landing page with a single introductory section",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/huddle-landing-page-with-single-introductory-section-master\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/huddle-landing-page-with-curved-sections-master",
+    "imgName": ".\/img\/68970394a7bc52ad3077927e7.webp"
+},
+{
+    "id": "18",
+    "baslik": "Interactive card details form",
+    "aciklama": "This is a solution for Interactive card details form",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/interactive-card-details-form-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/Interactive-card-details-form-main",
+    "imgName": ".\/img\/746fb6531d1e7a3e527837215.webp"
+},
+{
+    "id": "19",
+    "baslik": "Interactive rating component",
+    "aciklama": "This is a solution for Interactive rating component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/Interactive-rating-components\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/Interactive-rating-component",
+    "imgName": ".\/img\/fc607e298b6f7cd4c3cfa5072.webp"
+},
+{
+    "id": "20",
+    "baslik": "Coding bootcamp testimonials slider",
+    "aciklama": "This is a solution for Coding bootcamp testimonials slider",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/coding-bootcamp-testimonials-slider-master\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/coding-bootcamp-testimonials-slider-master",
+    "imgName": ".\/img\/92816a4df9d90b7e5d559c46c.webp"
+},
+{
+    "id": "21",
+    "baslik": "Multi-step form",
+    "aciklama": "This is a solution for Multi-step form",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/multi-step-form-main\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/multi-step-form-main",
+    "imgName": ".\/img\/0f9d7a6389a7f34f4651178e1.webp"
+},
+{
+    "id": "22",
+    "baslik": "Results summary component",
+    "aciklama": "This is a solution for Results summary component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/results-summary-component-main\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/results-summary-component-main",
+    "imgName": ".\/img\/d10ebcaa63697f55cc6ab49d7.webp"
+},
+{
+    "id": "23",
+    "baslik": "Blogr landing page",
+    "aciklama": "This is a solution for Blogr landing page",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/blogr-landing-page-main\/index.html",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/blogr-landing-page-main",
+    "imgName": ".\/img\/1b0f52986b9afaaa4437ea93d.webp"
+},
+{
+    "id": "24",
+    "baslik": "Expenses chart component",
+    "aciklama": "This is a solution for Expenses chart component",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/expenses-chart-component-main\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/Expenses-chart-component",
+    "imgName": ".\/img\/cafb8d88476d57eea4a8826d3.webp"
+},
+{
+    "id": "25",
+    "baslik": "Room homepage",
+    "aciklama": "This is a solution for Room homepage",
+    "siteUrl": "https:\/\/kisacasumderler.github.io\/web-siteler\/room-homepage-master\/",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/room-homepage-master",
+    "imgName": ".\/img\/3d232d9a1a1798cb9bf66b4c6.webp"
+},
+{
+    "id": "26",
+    "baslik": "Btk akademi e ticaret projesi",
+    "aciklama": "Btk akademi e ticaret projesi",
+    "siteUrl": "https:\/\/btkegitimeticaret.great-site.net\/?i=1",
+    "repoUrl": "https:\/\/github.com\/kisacasumderler\/Btk_Eticaret_Proje",
+    "imgName": ".\/img\/e20e567c623fa75c2f9f338ed.png"
+}
+]
+
+}
+]

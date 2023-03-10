@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+}
+
+p, span, div, a, ul, li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Kanit", sans-serif;
+  color: #de4a6c;
+}
+
+p {
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #242424;
+  border: 0.1px solid #9378a1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0a0a0a;
+}
+
+main {
+  background: #0a0a0a;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(95deg, #de4a6c, #9378a1);
+  padding-top: 0.2rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  animation-name: hBg;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+header .headerImg {
+  background-image: url("https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  mix-blend-mode: lig;
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  padding: 0 5%;
+  box-shadow: 0px 0px 15px -5px #0a0a0a inset;
+}
+header .headerImg div {
+  width: calc(5rem + 8vw);
+  height: calc(5rem + 8vw);
+  background: linear-gradient(95deg, #de4a6c, #9378a1);
+  border-radius: 50%;
+  padding: 0.3rem;
+  margin-bottom: -3rem;
+  box-shadow: -5px 10px 30px -5px #0a0a0a;
+}
+header .headerImg div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+header .headerIcerik {
+  background: #242424;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerText {
+  width: 90%;
+  padding: 1.5rem 0;
+}
+.headerText h1 {
+  margin-bottom: 1.5rem;
+}
+.headerText p {
+  color: #bfbfbf;
+  margin-bottom: 1rem;
+}
+
+section {
+  width: 100%;
+  padding: 1rem;
+}
+section .icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Kapsam {
+  background: #0a0a0a;
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 1rem;
+  max-height: 100vh;
+  padding: 1rem;
+}
+
+.Kapsam li {
+  background: #242424;
+  box-shadow: 1px 1px 5px #242424;
+  width: calc((100% - 2rem) / 3);
+  min-height: 250px;
+  border-radius: 1rem;
+}
+
+.Kapsam li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(95deg, #de4a6c, #9378a1);
+  padding: 0.2rem;
+}
+.Kapsam li .icerik {
+  width: 100%;
+  background: #242424;
+  border-radius: 1rem;
+}
+.Kapsam li .img {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Kapsam li img {
+  width: 100%;
+  height: auto;
+}
+.Kapsam li .img, .Kapsam li img {
+  border-radius: 0.7rem;
+}
+.Kapsam li .text {
+  padding: 1rem;
+}
+.Kapsam li .text h1 {
+  color: #de4a6c;
+  margin-bottom: 1rem;
+}
+.Kapsam li .text p {
+  color: #bfbfbf;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  fill: #9378a1;
+  transition: 0.4s ease-in-out;
+}
+
+.icerik .icons {
+  position: relative;
+}
+
+svg ~ span {
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 1rem;
+  display: none;
+  padding: 0.5rem 0;
+  background: #de4a6c;
+  color: white;
+}
+
+svg:hover {
+  fill: #9378a1;
+  animation-name: aHover;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+svg:hover ~ span {
+  display: inline;
+}
+
+footer {
+  background: linear-gradient(95deg, #de4a6c, #9378a1);
+  width: 100%;
+  padding-top: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  padding-bottom: 0.2rem;
+}
+footer .footerIcerik {
+  background: #242424;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  color: #bfbfbf;
+}
+footer .footerIcerik p {
+  margin-bottom: 1rem;
+}
+footer .footerIcerik p a {
+  color: #de4a6c;
+  transition: 0.3s ease-in-out;
+}
+footer .footerIcerik p a:hover {
+  color: #9378a1;
+}
+footer .footerIcerik .SendBtn {
+  background: #de4a6c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #ecf2f7;
+  width: 12rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 2px groove #ecf2f7;
+  transition: 0.3s ease-in-out;
+}
+footer .footerIcerik .SendBtn svg {
+  fill: #ecf2f7;
+  animation: none;
+}
+footer .footerIcerik .SendBtn:hover {
+  background: #9378a1;
+}
+
+@media (max-width: 1200px) {
+  .Kapsam li {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+@media (max-width: 920px) {
+  header .headerImg {
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+  }
+  header .headerImg div {
+    margin: 0;
+  }
+}
+@media (max-width: 720px) {
+  header .headerImg {
+    height: 50vw;
+  }
+  .Kapsam li {
+    width: 100%;
+  }
+  p, span, div, a, ul, li {
+    font-size: 0.8rem;
+  }
+}
+@keyframes aHover {
+  from {
+    fill: #9378a1;
+    margin-top: 0;
+  }
+  to {
+    fill: #de4a6c;
+    margin-top: -0.5rem;
+  }
+}
+@keyframes hBg {
+  0% {
+    background: linear-gradient(95deg, #de4a6c, #9378a1);
+  }
+  50% {
+    background: linear-gradient(95deg, #9378a1, #de4a6c);
+  }
+}/*# sourceMappingURL=app.css.map */
