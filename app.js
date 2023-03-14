@@ -6,7 +6,7 @@ $(window).ready(function () {
     return `<li id="${id}">
     <div class="icerik">
         <div class="img">
-            <img src="${imghref}" alt="">
+            <img src="./img/${imghref}" alt="">
         </div>
         <div class="text">
             <h1>${title}</h1>
@@ -61,12 +61,28 @@ $(window).ready(function () {
         Hesapla(t, k);
       }
     }
+
+    function HesaplaMobile(t, k) {
+      if (t > k / 2.5) {
+        k += 10;
+        Kapsam.css("min-height", k + "px");
+        Hesapla(t, k);
+      }
+    }
+
     function checkWidth() {
-      Hesapla(ToplamYuk, KapsamYuk);
+      if($(window).outerWidth(true)>720) {
+        Hesapla(ToplamYuk, KapsamYuk);
+      }
+      if($(window).outerWidth(true)<720) {
+        HesaplaMobile(ToplamYuk, KapsamYuk);
+      }
     }
 
     $(window).resize(checkWidth);
   });
   // 
-
+  
 })
+
+// $(window).outerWidth(true)

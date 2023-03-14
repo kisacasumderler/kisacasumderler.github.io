@@ -109,7 +109,7 @@ p {
 main {
     background: $bgBlack;
     width: 100%;
-    min-height: 100vh;
+    min-height: 800px;
     @include DFlex();
     justify-content: flex-start;
 }
@@ -127,8 +127,8 @@ header {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     .headerImg {
-        background-image: url("https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-        background-size: cover;
+        background-image: url("../img/Untitled-2.png");
+        background-size: contain;
         background-repeat: no-repeat;
         background-attachment: fixed;
         mix-blend-mode: lig;
@@ -148,6 +148,7 @@ header {
             padding: .3rem;
             margin-bottom: -3rem;
             box-shadow: -5px 10px 30px -5px $bgBlack;
+            z-index: 2;
             img {
                 width: 100%;
                 height: 100%;
@@ -156,15 +157,16 @@ header {
         }
     }
     .headerIcerik {
-        background: $bgGray;
         border-radius: 0 0  1.5rem 1.5rem;
         @include DFlex();
     }
 }
 
 .headerText {
-    width: 90%;
-    padding: 1.5rem 0;
+    background: $bgGray;
+    width: 100%;
+    padding: 1.5rem 10%;
+    z-index: 1;
     h1 {
         margin-bottom: 1.5rem;
     }
@@ -358,6 +360,11 @@ footer {
                 }
                 }
             }
+    header {
+        .headerImg {
+            background-image: url("../img/Untitled-3.png");
+            }
+        }
 }
 
 @media(max-width:720px) {
@@ -376,6 +383,11 @@ footer {
     p, span, div, a, ul, li {
         font-size: .8rem;
     }
+    header {
+        .headerImg {
+            background-image: url("../img/Untitled-4.png");
+            }
+        }
 }
 
 @keyframes aHover {
@@ -393,7 +405,16 @@ footer {
     0% {
         background: linear-gradient(95deg, $Gradient1, $Gradient2);
     }
+    25% {
+        background: linear-gradient(95deg, $Gradient2, $Gradient1);
+    }
     50% {
+        background: linear-gradient(185deg, $Gradient1, $Gradient2);
+    }
+    75% {
+        background: linear-gradient(1855deg, $Gradient2, $Gradient1);
+    }
+    100% {
         background: linear-gradient(95deg, $Gradient2, $Gradient1);
     }
 }
