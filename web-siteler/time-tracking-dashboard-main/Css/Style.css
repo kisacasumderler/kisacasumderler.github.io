@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: hsl(226deg, 43%, 10%);
+  background: hsl(226, 43%, 10%);
   min-height: 100vh;
   position: relative;
 }
@@ -33,13 +33,13 @@ body main {
   gap: 2rem;
 }
 body main header {
-  background: hsl(235deg, 46%, 20%);
+  background: hsl(235, 46%, 20%);
   border-radius: 1.5rem;
   width: 34%;
 }
 body main header .inf {
   padding: 2.3rem 2rem;
-  background: hsl(246deg, 80%, 60%);
+  background: hsl(246, 80%, 60%);
   border-radius: 1.5rem;
 }
 body main header .inf .img {
@@ -55,7 +55,7 @@ body main header .inf .img img {
   border-radius: 100%;
 }
 body main header .inf span {
-  color: hsl(236deg, 100%, 87%);
+  color: hsl(236, 100%, 87%);
 }
 body main header .inf h1 {
   font-size: 3rem;
@@ -66,7 +66,7 @@ body main header .inf h1 {
 }
 body main header .buttons {
   padding: 2rem;
-  background: hsl(235deg, 46%, 20%);
+  background: hsl(235, 46%, 20%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +79,7 @@ body main header .buttons button {
   background: none;
   border: none;
   font-size: 1.3rem;
-  color: hsl(235deg, 45%, 61%);
+  color: hsl(235, 45%, 61%);
   font-weight: 300;
   cursor: pointer;
   transition: 0.3s ease;
@@ -95,42 +95,42 @@ body main ul {
   background: transparent;
 }
 body main ul #Work {
-  background: hsl(15deg, 100%, 70%);
+  background: hsl(15, 100%, 70%);
   background-image: url("../images/icon-work.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
   background-size: auto;
 }
 body main ul #Play {
-  background: hsl(195deg, 74%, 62%);
+  background: hsl(195, 74%, 62%);
   background-image: url("../images/icon-play.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
   background-size: auto;
 }
 body main ul #Study {
-  background: hsl(348deg, 100%, 68%);
+  background: hsl(348, 100%, 68%);
   background-image: url("../images/icon-study.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
   background-size: auto;
 }
 body main ul #Exercise {
-  background: hsl(145deg, 58%, 55%);
+  background: hsl(145, 58%, 55%);
   background-image: url("../images/icon-exercise.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
   background-size: auto;
 }
 body main ul #Social {
-  background: hsl(264deg, 64%, 52%);
+  background: hsl(264, 64%, 52%);
   background-image: url("../images/icon-social.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
   background-size: auto;
 }
 body main ul #Self {
-  background: hsl(43deg, 84%, 65%);
+  background: hsl(43, 84%, 65%);
   background-image: url("../images/icon-self-care.svg");
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
@@ -141,7 +141,7 @@ body main ul li {
 }
 body main ul li .contain {
   margin-top: 3rem;
-  background: hsl(235deg, 46%, 20%);
+  background: hsl(235, 46%, 20%);
   padding: 1.5rem;
   border-radius: 1rem;
   transition: 0.3s ease;
@@ -169,10 +169,10 @@ body main ul li .contain .time {
 }
 body main ul li .contain div {
   margin-top: 1.5rem;
-  color: hsl(236deg, 100%, 87%);
+  color: hsl(236, 100%, 87%);
 }
 body main ul li .contain:hover {
-  background: hsl(235deg, 45%, 61%);
+  background: hsl(235, 45%, 61%);
 }
 body footer {
   position: absolute;
@@ -181,28 +181,28 @@ body footer {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  background: hsl(235deg, 45%, 61%);
+  background: hsl(235, 45%, 61%);
   padding-top: 0.5rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 body footer .attribution {
   border-radius: 0.5rem 0.5rem 0 0;
-  background: hsl(235deg, 46%, 20%);
+  background: hsl(235, 46%, 20%);
   padding: 0.7rem 0;
 }
 body footer .attribution span {
-  color: hsl(235deg, 45%, 61%);
+  color: hsl(235, 45%, 61%);
 }
 body footer .attribution a {
-  color: hsl(236deg, 100%, 87%);
+  color: hsl(236, 100%, 87%);
   font-weight: 500;
   transition: 0.3s ease;
 }
 body footer .attribution a:link, body footer .attribution a:visited {
-  color: hsl(43deg, 84%, 65%);
+  color: hsl(43, 84%, 65%);
 }
 body footer .attribution a:hover {
-  color: hsl(15deg, 100%, 70%);
+  color: hsl(15, 100%, 70%);
 }
 
 @media (min-width: 1500px) {

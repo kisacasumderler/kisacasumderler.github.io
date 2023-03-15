@@ -13,6 +13,7 @@ $textGray : #bfbfbf;
 // gradient 
 
 $colorMix: linear-gradient(95deg, $Gradient1, $Gradient2);
+$colorMixCont: linear-gradient(95deg, $Gradient2,$Gradient1);
 
 // font 
 
@@ -36,7 +37,9 @@ p, span, div, a, ul, li {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $ffheader;
-    color: $Gradient1;
+    background: linear-gradient($Gradient1, $Gradient2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 p {
     letter-spacing: .1rem;
@@ -169,7 +172,7 @@ header {
     z-index: 1;
     h1 {
         margin-bottom: 1.5rem;
-    }
+      }
     p {
         color: $textGray;
         margin-bottom: 1rem;
@@ -234,7 +237,6 @@ section {
         .text {
             padding: 1rem;
             h1 {
-                color: $Gradient1;
                 margin-bottom: 1rem;
             }
             p {
@@ -258,6 +260,7 @@ svg {
     height: 30px;
     fill: #9378a1;
     transition: .4s ease-in-out;
+    
 }
 
 .icerik {

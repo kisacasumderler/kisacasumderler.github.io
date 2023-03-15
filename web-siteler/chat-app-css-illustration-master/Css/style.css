@@ -16,12 +16,12 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background: hsl(270deg, 20%, 96%);
+  background: hsl(270, 20%, 96%);
   position: relative;
   overflow-x: hidden;
 }
 body .leftbg {
-  background: linear-gradient(-130deg, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  background: linear-gradient(-130deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
   width: 40%;
   height: 90vh;
   position: absolute;
@@ -31,7 +31,7 @@ body .leftbg {
   z-index: -1;
 }
 body .rightbg {
-  background: linear-gradient(142deg, hsl(270deg, 20%, 96%), hsl(206deg, 6%, 79%));
+  background: linear-gradient(142deg, hsl(270, 20%, 96%), hsl(206, 6%, 79%));
   position: absolute;
   width: 40%;
   height: 90vh;
@@ -52,9 +52,9 @@ body main {
 }
 body main .phone {
   width: 380px;
-  background: hsl(270deg, 20%, 96%);
+  background: hsl(270, 20%, 96%);
   height: 723.75px;
-  border: 15px solid hsl(0deg, 0%, 100%);
+  border: 15px solid hsl(0, 0%, 100%);
   border-radius: 2.5rem;
   box-shadow: 5px 5px 500px rgba(0, 0, 0, 0.089);
   position: relative;
@@ -67,7 +67,7 @@ body main .phone .handset {
   width: 60%;
   height: 1.5rem;
   z-index: 3;
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(0, 0%, 100%);
   border-radius: 0 0 1rem 1rem;
 }
 body main .phone .messageForm {
@@ -93,21 +93,21 @@ body main .phone .messageForm input {
   padding: 0.5rem;
 }
 body main .phone .messageForm :-ms-input-placeholder {
-  color: hsl(206deg, 6%, 79%);
+  color: hsl(206, 6%, 79%);
 }
 body main .phone .messageForm button {
   width: 3rem;
   height: 2.5rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   border: none;
   cursor: pointer;
-  background: hsl(271deg, 36%, 24%);
+  background: hsl(271, 36%, 24%);
   border-radius: 50%;
   font-size: 1.5rem;
 }
 body main .phone .screenTop {
   gap: 0.8rem;
-  background-image: linear-gradient(-130deg, hsl(293deg, 100%, 63%), hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  background-image: linear-gradient(-130deg, hsl(293, 100%, 63%), hsl(293, 100%, 63%), hsl(264, 100%, 61%));
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,7 +120,7 @@ body main .phone .screenTop {
   z-index: 2;
 }
 body main .phone .screenTop .leftarrow {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 body main .phone .screenTop div {
   display: flex;
@@ -133,10 +133,10 @@ body main .phone .screenTop div {
 body main .phone .screenTop div img {
   width: 2.5rem;
   border-radius: 100%;
-  border: 2px solid hsl(0deg, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
 }
 body main .phone .screenTop div h1 {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -149,14 +149,14 @@ body main .phone .screenTop div h1 span {
 body main .phone .screenTop div h1 b {
   font-weight: 100;
   font-size: 14px;
-  color: hsl(276deg, 100%, 81%);
+  color: hsl(276, 100%, 81%);
 }
 body main .phone .screenTop .dots {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   line-height: 0.4rem;
 }
 body main .phone .screenTop .dots i {
@@ -268,14 +268,14 @@ body main .phone .screenBottom li:nth-child(8) {
 }
 body main .phone .screenBottom .IncomingMsg {
   background: #e9e3ed;
-  color: hsl(276deg, 55%, 52%);
+  color: hsl(276, 55%, 52%);
   justify-self: start;
   margin-left: 1rem;
   border-radius: 1.5rem 1.5rem 1.5rem 0.2rem;
 }
 body main .phone .screenBottom .sendMsg {
-  background: hsl(0deg, 0%, 100%);
-  color: hsl(271deg, 36%, 24%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(271, 36%, 24%);
   justify-self: end;
   margin-right: 1rem;
   border-radius: 1.5rem 1.5rem 0.2rem 1.5rem;
@@ -295,8 +295,8 @@ body main .phone .screenBottom .messageImg img {
   border-radius: 1rem;
 }
 body main .phone .screenBottom .jobInf {
-  background: linear-gradient(90deg, hsl(293deg, 100%, 63%), hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
-  color: hsl(270deg, 20%, 96%);
+  background: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  color: hsl(270, 20%, 96%);
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -315,27 +315,27 @@ body main .phone .screenBottom .jobInf div span:first-child {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  border: 2px solid hsl(289deg, 100%, 72%);
+  border: 2px solid hsl(289, 100%, 72%);
   border-radius: 50%;
 }
 body main .phone .screenBottom .jobInf .Price {
   font-size: 1.3rem;
   font-weight: 500;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 body main .pdiv {
   width: 50%;
   text-align: start;
 }
 body main .pdiv h1 {
-  color: hsl(271deg, 36%, 24%);
+  color: hsl(271, 36%, 24%);
   font-size: 3rem;
   margin-bottom: 3rem;
 }
 body main .pdiv p {
   line-height: 2.5rem;
   font-size: 1.5rem;
-  color: hsl(270deg, 7%, 64%);
+  color: hsl(270, 7%, 64%);
 }
 
 @media ((max-width: 1500px) and (min-width: 720px)) {
