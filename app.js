@@ -97,3 +97,8 @@ $(window).ready(function () {
   // 
   
 })
+<<<<<<< HEAD
+=======
+
+// $(window).outerWidth(true)
+>>>>>>> 3f54dbb0af3ebdd764553b8da3ae070a046056c7
