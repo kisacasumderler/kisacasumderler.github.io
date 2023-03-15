@@ -57,7 +57,7 @@ $(window).ready(function () {
     function Hesapla(t, k) {
       if (t > k / 1.5) {
         k += 10;
-        Kapsam.css("min-height", k + "px");
+        Kapsam.css("max-height", k + "px");
         Hesapla(t, k);
       }
     }
@@ -65,7 +65,7 @@ $(window).ready(function () {
     function HesaplaMobile(t, k) {
       if (t > k / 2.5) {
         k += 10;
-        Kapsam.css("min-height", k + "px");
+        Kapsam.css("max-height", k + "px");
         Hesapla(t, k);
       }
     }
