@@ -141,7 +141,6 @@ section .icons {
   align-items: center;
   flex-flow: column wrap;
   gap: 1rem;
-  max-height: 100vh;
   padding: 1rem;
 }
 

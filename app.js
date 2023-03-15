@@ -52,12 +52,10 @@ $(window).ready(function () {
       ToplamYuk += li.eq(i).outerHeight(true);
     }
 
-    Hesapla(ToplamYuk, KapsamYuk);
-
     function Hesapla(t, k) {
       if (t > k / 1.5) {
         k += 10;
-        Kapsam.css("min-height", k + "px");
+        Kapsam.css("max-height", k + "px");
         Hesapla(t, k);
       }
     }
@@ -65,17 +63,32 @@ $(window).ready(function () {
     function HesaplaMobile(t, k) {
       if (t > k / 2.5) {
         k += 10;
-        Kapsam.css("min-height", k + "px");
+        Kapsam.css("max-height", k + "px");
         Hesapla(t, k);
       }
+    }
+
+    if($(window).outerWidth(true)>720) {
+      Hesapla(ToplamYuk, KapsamYuk);
+    }
+    if($(window).outerWidth(true)>=600 && $(window).outerWidth(true)<=720) {
+      HesaplaMobile(ToplamYuk, KapsamYuk);
+    }
+    if($(window).outerWidth(true)<600) {
+      Kapsam.removeAttr("style");
+      Kapsam.css("height","auto");
     }
 
     function checkWidth() {
       if($(window).outerWidth(true)>720) {
         Hesapla(ToplamYuk, KapsamYuk);
       }
-      if($(window).outerWidth(true)<720) {
+      if($(window).outerWidth(true)>=600 && $(window).outerWidth(true)<=720) {
         HesaplaMobile(ToplamYuk, KapsamYuk);
+      }
+      if($(window).outerWidth(true)<600) {
+        Kapsam.removeAttr("style");
+        Kapsam.css("height","auto");
       }
     }
 
@@ -84,5 +97,3 @@ $(window).ready(function () {
   // 
   
 })
-
-// $(window).outerWidth(true)
