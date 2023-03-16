@@ -84,7 +84,7 @@ $(window).ready(function () {
             let li1Hesapla = yukHesapla(li2_1);
             let li2Hesapla = yukHesapla(li2_2) - li1Hesapla;
 
-            let maxUlHeight = Math.floor((li1Hesapla+li2Hesapla)/1.4);
+            let maxUlHeight = Math.floor((li1Hesapla+li2Hesapla)/1.3);
             return maxUlHeight;
         }
 
