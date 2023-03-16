@@ -69,7 +69,8 @@ $(window).ready(function () {
             let li3hesapla = yukHesapla(liMax) - li2hesapla; // 0 - 30
 
 
-            let maxUlHeight = Math.max(li1hesapla, li2hesapla, li3hesapla);
+            let maxUlHeight = Math.floor((li1hesapla+li2hesapla+li3hesapla)/2);
+            // console.log(maxUlHeight);
             return maxUlHeight;
         }
 
@@ -83,7 +84,7 @@ $(window).ready(function () {
             let li1Hesapla = yukHesapla(li2_1);
             let li2Hesapla = yukHesapla(li2_2) - li1Hesapla;
 
-            let maxUlHeight = Math.max(li1Hesapla, li2Hesapla);
+            let maxUlHeight = Math.floor((li1Hesapla+li2Hesapla)/1.4);
             return maxUlHeight;
         }
 
@@ -93,11 +94,11 @@ $(window).ready(function () {
 
         let LoadPage = () => {
             if ($(window).outerWidth(true) > 1200) {
-                Kapsam.css("height", ulMaxHeightD);
+                Kapsam.css("height", ulMaxHeightD+"px");
                 // desktop 
             }
             if ($(window).outerWidth(true) >= 720 && $(window).outerWidth(true) <= 1200) {
-                Kapsam.css("height", ulMaxHeightM);
+                Kapsam.css("height", ulMaxHeightM+"px");
                 // tablet
             }
             if ($(window).outerWidth(true) < 720) {
