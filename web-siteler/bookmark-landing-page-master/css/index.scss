@@ -1,0 +1,817 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+$SoftBlue: #5368df;
+$SoftRed: #fa5757;
+$GrayishBlue: #9194a1;
+$VeryDarkBlue: #252b46;
+$FontSize: 18px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: .05rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+p, span, div, a, ul, li {
+    font-size: $FontSize;
+}
+
+@mixin DFlex($val:0,$val2:0, $val3:0){
+    display: flex;
+    @if($val==0){
+        flex-direction: column;
+    }
+    @else if($val==1){
+        flex-direction: row;
+    }
+    @else if($val==2){
+        flex-direction: column-reverse;
+    }
+    @else if($val==4){
+        flex-direction: row-reverse;
+    }
+    @if($val2==0){
+        justify-content: center;
+    }
+    @else if($val2==1){
+        justify-content: flex-start;
+    }
+    @else if($val2==2){
+        justify-content: flex-end;
+    }
+    @if($val3==0){
+        align-items: center;
+    }
+    @else if($val3==1){
+        align-items: flex-start;
+    }
+    @else if($val3==2){
+        align-items: flex-end;
+    }
+}
+
+@mixin useSelectNone() {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@mixin logoBGDark () {
+    g {
+        fill: none;
+        path {
+            fill: #fff;
+        }
+        g {
+            circle {
+                fill: #fff;
+            }
+            path {
+                fill: #252b46;
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+    @include DFlex();
+}
+
+header {
+    width: 100%;
+    @include DFlex();
+    position: relative;
+    nav {
+        margin: 3rem 0;
+        width: 70%;
+        @include DFlex(1);
+        justify-content: space-between;
+        ul {
+            @include DFlex(1);
+            gap: 3rem;
+            li {
+                a {
+                    color: $VeryDarkBlue;
+                    text-transform: uppercase;
+                    transition: .3s ease;
+                    font-weight: 400;
+                }
+                a:hover {
+                    color: $SoftRed;
+                }
+            }
+        }
+        .ContactIcons {
+            display: none;
+        }
+    }
+    .headerBody {
+        width: 70%;
+        margin: 1rem 0;
+        margin-top: 5%;
+        @include DFlex(1);
+    }
+    .headerText {
+        padding: 0 5%;
+        width: 100%;
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        p {
+            margin-bottom: 2rem;
+            width: 80%;
+        }
+        .btnGroup {
+            @include DFlex(1,1);
+            gap: 1rem;
+            a:first-child {
+                background: $SoftBlue;
+            }
+            a:first-child:hover {
+                background: transparent;
+                color: $SoftBlue;
+                border-color: $SoftBlue;
+            }
+            a:last-child {
+                background: $GrayishBlue;
+            }
+            a:last-child:hover {
+                background: transparent;
+                color: $GrayishBlue;
+                border-color: $GrayishBlue;
+            }
+            .btn {
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.233);
+            }
+        }
+    }
+    .headerImg {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+section {
+    margin-top: 10%;
+    .img {
+        width: 34.792vw;
+        height: 31.667vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+    .sectionHeader {
+        width: 100%;
+        @include DFlex();
+        padding: 0 20%;
+        gap: 2rem;
+        text-align: center;
+        p {
+            text-align: center;
+        }
+    }
+    .btn {
+        background: $SoftBlue;
+    }
+    .btn:hover {
+        border-color: $SoftBlue;
+        color: $SoftBlue;
+    }
+}
+
+#sc1 {
+    width: 100%;
+    position: relative;
+    .shape {
+        top: 70%;
+        left: 0;
+        width: 35%;
+        border-radius: 0 10rem 10rem 0;
+    }
+    .sectionTab {
+        @include DFlex();
+        ul:first-child {
+            width: 60%;
+            @include DFlex(1);
+            gap: 2rem;
+            margin: 3% 0;
+            border-bottom: 1px solid $GrayishBlue;
+            li {
+                padding-bottom: 1rem;
+                width: 100%;
+                text-align: center;
+                cursor: pointer;
+                transition: .3s ease;
+                color: $VeryDarkBlue;
+                border-bottom: 3px solid transparent;
+                @include useSelectNone();
+            }
+            li:hover {
+                color: $SoftRed;
+            }
+            li:first-child {
+                border-color: $SoftRed;
+            }
+        }
+        ul:last-child {
+            width: 80%;
+            li {
+                @include DFlex(1);
+                .img {
+                    width: 100%;
+                }
+                .text {
+                    width: 100%;
+                    padding: 0 10%;
+                    @include DFlex();
+                    align-items: flex-start;
+                    gap: calc(.5em + 1vw);
+                }
+            }
+            li:not(:first-child){
+                display: none;
+            }
+        }
+    }
+}
+
+#sc2 {
+    width: 100%;
+    @include DFlex();
+    ul {
+        width: 80%;
+        @include DFlex(1);
+        justify-content: space-1;
+        margin: 5% 0;
+        height: 500px;
+        // background: rebeccapurple;
+        li {
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.096);
+            height: 450px;
+            @include DFlex();
+            justify-content: space-evenly;
+            .dot {
+                width: 100%;
+                height: .2rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .btn {
+                margin: 0 1rem;
+            }
+            i {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+#sc3 {
+    width: 100%;
+    @include DFlex();
+    ul {
+        width: 60%;
+        margin: 5% 0;
+        border-bottom: 1px solid $GrayishBlue;
+        .question {
+            @include DFlex(1);
+            justify-content: space-between;
+            border-top: 1px solid $GrayishBlue;
+            padding: 1.5rem 1rem;
+            cursor: pointer;
+            transition: .3s ease;
+
+            svg.active {
+                animation-name: rotate-arrow;
+                animation-iteration-count: 1;
+                animation-duration: .4s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .question:hover {
+            border-top: 1px solid $SoftRed;
+            h4 {
+               color: $SoftRed; 
+            }
+            path {
+                stroke: $SoftRed;
+            }
+        }
+        .answer {
+            height: 0;
+            opacity: 0;
+            padding: 0;
+            display: none;
+        }
+        .answer.active {
+            animation-name: answer-show;
+            animation-iteration-count: 1;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+footer {
+    @include DFlex();
+    width: 100%;
+    margin-top: 10%;
+
+    .footerBody {
+        width: 100%;
+        @include DFlex();
+        background: $SoftBlue;
+        padding: 3rem 35%;
+        gap: 3rem;
+        text-align: center;
+        h3, h2 {
+            color: #fff
+        }
+        form {
+            @include DFlex(1,1,1);
+            gap: 1rem;
+            width: 100%;
+            div {
+                width: 100%;
+                position: relative;
+                input {
+                    width: 100%;
+                    height: 3rem;
+                    padding: .5rem;
+                    font-size: 18px;
+                    color: $VeryDarkBlue;
+                    outline: none;
+                    border-radius: .5rem;
+                    border: 2px solid transparent;
+                }
+                span {
+                    width: 100%;
+                    display: block;
+                    background: $SoftRed;
+                    padding: .5rem;
+                    font-size: 12px;
+                    color: #fff;
+                    border-radius: 0 0 .5rem .5rem;
+                    opacity: 0;
+                }
+                svg {
+                    position: absolute;
+                    right: 3%;
+                    top: 19%;
+                    opacity: 0;
+                }
+            }
+            button {
+                cursor: pointer;
+                width: 50%;
+                height: 3rem;
+                @include DFlex();
+            }
+            .btn:hover {
+                background: #fff;
+            }
+        }
+    }
+    nav {
+        width: 100%;
+        background: $VeryDarkBlue;
+        @include DFlex(1);
+        justify-content: space-between;
+        padding: 1rem 10%;
+
+        ul {
+            @include DFlex(1,1);
+            gap: 2rem;
+            li {
+                a {
+                    color: #fff;
+                    transition: .3s ease;
+                    text-transform: uppercase;
+                    svg {
+                        @include logoBGDark();
+                    }
+                }
+                a:hover {
+                    color: $SoftRed;
+                }
+            }
+        }
+        .ContactIcons {
+            @include DFlex(1);
+            gap: 2rem;
+            a {
+               transition: .3s ease;
+            }
+            a:hover {
+                svg {
+                    path {
+                        fill: $SoftRed;
+                    }
+                }
+            }
+        }
+    }
+    .attribution {
+        padding: .5rem 0;
+        font-size: 14px;
+        background: $SoftRed;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        a {
+            font-size: 18px;
+            transition: .3s ease;
+            color: #fff;
+        }
+        a:hover {
+            color: $SoftBlue;
+        }
+    }
+}
+
+.btn {
+    padding: .7rem 2rem;
+    background: $SoftRed;
+    border-radius: .5rem;
+    color: #fff;
+    border: 3px solid transparent;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: $SoftRed;
+    color: $SoftRed;
+}
+h1, h2, h3, h4 {
+    font-weight: 400;
+    color: $VeryDarkBlue;
+}
+h1 {
+    font-size: calc(1em + 2vw);
+}
+
+h2 {
+    font-size: calc(.8em + 1.5vw);
+}
+
+h3 {
+    font-size: calc(.6em + 1.3vw);
+}
+
+h4 {
+    font-size: calc(.4em + 1vw);
+}
+
+p {
+    line-height: 2.5rem;
+    font-weight: 100;
+    color: $GrayishBlue;
+}
+
+.shape {
+    width: 40%;
+    height: 30vh;
+    background: $SoftBlue;
+    border-radius: 10rem 0 0 10rem;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+}
+
+.Hamburger, .Close {
+    cursor: pointer;
+}
+
+@media(min-width:720px){
+    header {
+        nav {
+            .NavIcon {
+                display: none;
+            }
+        }
+    }
+    #sc2 {
+        ul {
+            justify-content: space-evenly;
+            li:first-child {
+                align-self: flex-start;
+            }
+            li:last-child {
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+@media(max-width:1600px){
+    header {
+        nav {
+            width: 80%;
+        }
+        .headerBody {
+            width: 80%;
+            .headerText {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:1400px) {
+    #sc2 {
+        ul {
+            justify-content: space-between;
+        }
+    }
+    footer {
+        .footerBody {
+            padding: 3rem 25%;
+        }
+    }
+}
+
+@media (max-width:1300px) {
+    #sc2 {
+        ul {
+            width: 90%;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+@media (max-width:990px) {
+    #sc2 {
+        ul {
+            width: 80%;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: space-evenly;
+            row-gap: 3rem;
+        }
+    }
+    header {
+        nav {
+            width: 90%;
+            ul {
+                gap: 1rem;
+            }
+        }
+    }
+    footer {
+        .footerBody {
+            padding: 3rem 20%;
+        }
+    }
+}
+
+@media(max-width:720px){
+    
+    header {
+        nav {
+            .NavIcon {
+                display: block;
+            }
+            ul {
+                display: none;
+            }
+        }
+        nav.active {
+            position: fixed;
+            left: 50%;
+            top: -10%;
+            transform: translate(-50%,0%);
+            align-items: flex-start;
+            padding: 5rem 3rem;
+            background: hsla(229, 31%, 21%, 0.973);
+            width: 100%;
+            height: 110vh;
+            z-index: 2;
+            #Logo {
+                @include logoBGDark();
+            }
+
+            .logo, .NavIcon {
+                margin-top: 1.5rem;
+            }
+            ul {
+                position: absolute;
+                flex-direction: column;
+                width: 100%;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                display: flex;
+                gap: 0;
+                li {
+                    width: 75%;
+                    text-align: center;
+                    padding: 1.5rem;
+                    a {
+                        color: #fff;
+                    }
+                }
+                li:not(:last-child){
+                    border-top: 1px solid #fff;
+                }
+                li:nth-child(3){
+                    border-bottom: 1px solid #fff;
+                }
+                li:last-child {
+                    a {
+                        border: 3px solid #fff;
+                        background: transparent;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    a:hover {
+                        background: #fff;
+                        color: $VeryDarkBlue;
+                    }
+                }
+            }
+            .NavIcon {
+                .Hamburger {
+                    display: none;
+                }
+            }
+            .ContactIcons {
+                display: flex;
+                gap: 2rem;
+                position: absolute;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .headerBody {
+            flex-direction: column-reverse;
+            .headerText {
+                text-align: center;
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+                .btnGroup {
+                    justify-content: center;
+                }
+            }
+        }
+        .shape {
+            top: 30%;
+        }
+    }
+    #sc1 {
+        .shape {
+            top: 55%;
+            width: 50%;
+        }
+        .sectionTab {
+            gap: 2rem;
+            ul:first-child {
+                flex-direction: column;
+                border-top: 1px solid $GrayishBlue;
+                margin: 5% 0;
+                gap: 0;
+                li {
+                    padding: 1rem 0;
+                }
+                li:not(:last-child){
+                    border-bottom: 1px solid $GrayishBlue;
+                }
+                }
+                ul:last-child {
+                    li {
+                        flex-direction: column;
+                        gap: 2rem;
+                        .text {
+                            align-items: center;
+                            text-align: center;
+                        }
+                        }
+                    }
+            }
+            
+    }
+    section {
+        margin-top: 20%;
+        .img {
+            height: 54.7vw;
+        }
+        .sectionHeader{
+            margin-bottom: 2rem;
+        }
+    }
+    footer {
+        .footerBody {
+            padding: 3rem 5%;
+            
+            form {
+                flex-direction: column;
+                div {
+                    width: 100%;
+                }
+                .btn {
+                    width: 100%;
+                }
+            }
+                    }
+        nav {
+            flex-direction: column;
+            gap: 2rem;
+            ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+     }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    h4 {
+        font-size: 1.1em;
+    }
+    p, span, div, a, ul, li {
+        font-size: 16px;
+    }
+    p {
+        line-height: 1.8em;
+    }
+    section {
+        .sectionHeader {
+            padding: 0 10%;
+        }
+    }
+    #sc3 {
+        ul {
+            width: 80%;
+            div {
+                h4 {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:400px){
+    header {
+        .shape {
+            top: 27%;
+            width: 55%;
+            height: 15vh;
+        }
+    }
+    #sc1 {
+        .shape {
+            top: 56%;
+            width: 55%;
+            height: 15vh;
+        }
+    }
+}
+
+@keyframes answer-show {
+    from {
+        height: 0;
+        opacity: 0;
+        padding: 0;
+    }
+    to {
+        height: auto;
+        opacity: 1;
+        padding: 1.5rem 1rem;
+    }
+}
+
+@keyframes rotate-arrow {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
