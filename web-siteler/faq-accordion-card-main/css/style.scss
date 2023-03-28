@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+$Softred: hsl(14, 88%, 65%);
+$Softviolet: hsl(273, 75%, 66%);
+$Softblue: hsl(240, 73%, 65%);
+$Verydarkgrayishblue: hsl(237, 12%, 33%);
+$Darkgrayishblue: hsl(240, 6%, 50%);
+$Lightgrayishblue: hsl(240, 5%, 91%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: .05rem;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+p, span, div, a, ul, li {
+    font-size: 12px;
+}
+
+@mixin DFlex($val:0,$val2:0, $val3:0){
+    display: flex;
+    @if($val==0){
+        flex-direction: column;
+    }
+    @else if($val==1){
+        flex-direction: row;
+    }
+    @else if($val==2){
+        flex-direction: column-reverse;
+    }
+    @else if($val==4){
+        flex-direction: row-reverse;
+    }
+    @if($val2==0){
+        justify-content: center;
+    }
+    @else if($val2==1){
+        justify-content: flex-start;
+    }
+    @else if($val2==2){
+        justify-content: flex-end;
+    }
+    @if($val3==0){
+        align-items: center;
+    }
+    @else if($val3==1){
+        align-items: flex-start;
+    }
+    @else if($val3==2){
+        align-items: flex-end;
+    }
+}
+
+@mixin useSelectNone() {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+@mixin ImgBgSize () {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin animate() {
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    @include DFlex();
+    background: linear-gradient(180deg, $Softviolet, $Softblue);
+}
+
+.acordionImg {
+    width: calc(24.583vw + 50px);
+    height: calc(18.698vw + 50px);
+    @include ImgBgSize();
+    position: relative;
+    margin-left: -13rem;
+    .boxImg {
+        width: calc(9.948vw + 50px);
+        height: calc( 9.583vw  + 50px);
+        @include ImgBgSize();
+        position: absolute;
+        left: -14%;
+        top: 37%;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+.acordionContianer {
+    @include DFlex(1);
+    width: 62.5vw;
+    border-radius: 2rem;
+    height: auto;
+    background: white;
+    padding: 5% 0;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: -30rem -15rem;
+    ul {
+        width: 50%;
+        padding-left: 10%;
+        @include DFlex(0,1,1);
+        gap: .5rem;
+        h1 {
+            margin-bottom: 1rem;
+            font-size: calc(2em + 1vw);
+        }
+        .acordionHeader {
+            @include DFlex(1);
+            justify-content: space-between;
+            padding: .5rem 0;
+        }
+        li {
+            width: 100%;
+            border-bottom: 1px solid $Lightgrayishblue;
+            padding: .5rem 0;
+            h2 {
+                font-weight: 100;
+                color: $Verydarkdesaturatedblue;
+                width: 95%;
+                font-size: 16px;
+                transition: .3s ease;
+                cursor: pointer;
+            }
+            h2.active {
+                font-weight: bold;
+            }
+            h2:hover {
+                color: $Softred;
+            }
+            svg.active {
+                transform: rotate(0);
+                animation-name: svgRotate;
+                @include animate();
+            }
+            p {
+                color: $Verydarkgrayishblue;
+                height: 0px;
+                overflow: hidden;
+                line-height: 1.3rem;
+            }
+            p.active {
+                animation-name: pActive;
+                @include animate();
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: $Lightgrayishblue;
+    font-size: 12px;
+    a {
+        color: #fff;
+        font-size: 16px;
+        transition: .3s ease;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width:1400px) {
+    .acordionContianer {
+        width: 67.5vw;
+        background-size: 83%;
+        background-position: -25rem -15rem;
+        ul {
+            padding-left: 10%;
+            gap: .5rem;
+            width: 50%;
+           li {
+            padding: .3rem;
+           }
+        }
+    }
+}
+
+@media (max-width:990px) {
+    .acordionImg {
+        width: calc(44.583vw + 50px);
+        height: calc(38.698vw + 50px);
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: -45%;
+        margin-bottom: 5rem;
+    }
+    .acordionContianer {
+        margin-top: 40%;
+        margin-bottom: 20%;
+        flex-direction: column;
+        background-image: url('../images/bg-pattern-mobile.svg');
+        background-size: 100%;
+        background-position: center 0;
+        ul {
+            width: 100%;
+            padding: 0 10%;
+        }
+    }
+    footer {
+        position: relative;
+        color: $Darkgrayishblue;
+        a {
+            color: $Softblue;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $Softred;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .acordionContianer {
+        width: 90%;
+    }
+    .acordionContianer {
+        background-size: 50%;
+    }
+    .mobile {
+        margin-top: -40%;
+        margin-bottom: 3rem;
+    }
+    .acordionContianer {
+        background-size: 80%;
+    }
+}
+
+@keyframes svgRotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes pActive {
+    from {
+        display: none;
+        height: 0;
+    }
+    to {
+        display: block;
+        height: 100%;
+    }
+}

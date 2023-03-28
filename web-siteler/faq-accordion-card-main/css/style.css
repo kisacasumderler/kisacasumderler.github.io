@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.05rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+p, span, div, a, ul, li {
+  font-size: 12px;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.acordionImg {
+  width: calc(24.583vw + 50px);
+  height: calc(18.698vw + 50px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin-left: -13rem;
+}
+.acordionImg .boxImg {
+  width: calc(9.948vw + 50px);
+  height: calc(9.583vw + 50px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  left: -14%;
+  top: 37%;
+}
+
+.mobile {
+  display: none;
+}
+
+.acordionContianer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 62.5vw;
+  border-radius: 2rem;
+  height: auto;
+  background: white;
+  padding: 5% 0;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: -30rem -15rem;
+}
+.acordionContianer ul {
+  width: 50%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.acordionContianer ul h1 {
+  margin-bottom: 1rem;
+  font-size: calc(2em + 1vw);
+}
+.acordionContianer ul .acordionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.acordionContianer ul li {
+  width: 100%;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 0.5rem 0;
+}
+.acordionContianer ul li h2 {
+  font-weight: 100;
+  color: hsl(238, 29%, 16%);
+  width: 95%;
+  font-size: 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.acordionContianer ul li h2.active {
+  font-weight: bold;
+}
+.acordionContianer ul li h2:hover {
+  color: hsl(14, 88%, 65%);
+}
+.acordionContianer ul li svg.active {
+  transform: rotate(0);
+  animation-name: svgRotate;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.acordionContianer ul li p {
+  color: hsl(237, 12%, 33%);
+  height: 0px;
+  overflow: hidden;
+  line-height: 1.3rem;
+}
+.acordionContianer ul li p.active {
+  animation-name: pActive;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: hsl(240, 5%, 91%);
+  font-size: 12px;
+}
+footer a {
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1400px) {
+  .acordionContianer {
+    width: 67.5vw;
+    background-size: 83%;
+    background-position: -25rem -15rem;
+  }
+  .acordionContianer ul {
+    padding-left: 10%;
+    gap: 0.5rem;
+    width: 50%;
+  }
+  .acordionContianer ul li {
+    padding: 0.3rem;
+  }
+}
+@media (max-width: 990px) {
+  .acordionImg {
+    width: calc(44.583vw + 50px);
+    height: calc(38.698vw + 50px);
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: -45%;
+    margin-bottom: 5rem;
+  }
+  .acordionContianer {
+    margin-top: 40%;
+    margin-bottom: 20%;
+    flex-direction: column;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-size: 100%;
+    background-position: center 0;
+  }
+  .acordionContianer ul {
+    width: 100%;
+    padding: 0 10%;
+  }
+  footer {
+    position: relative;
+    color: hsl(240, 6%, 50%);
+  }
+  footer a {
+    color: hsl(240, 73%, 65%);
+  }
+  footer a:hover {
+    text-decoration: none;
+    color: hsl(14, 88%, 65%);
+  }
+}
+@media (max-width: 600px) {
+  .acordionContianer {
+    width: 90%;
+  }
+  .acordionContianer {
+    background-size: 50%;
+  }
+  .mobile {
+    margin-top: -40%;
+    margin-bottom: 3rem;
+  }
+  .acordionContianer {
+    background-size: 80%;
+  }
+}
+@keyframes svgRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes pActive {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: block;
+    height: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
