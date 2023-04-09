@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.1rem;
+  font-family: "Public Sans", sans-serif;
+}
+
+p, span, div, a, ul, li {
+  font-size: 18px;
+}
+
+.btn {
+  display: block;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  transition: 0.5s ease-in;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #85e59f, #81d4e9);
+}
+
+body.active {
+  background: black;
+}
+body.active main > *:not(nav) {
+  opacity: 0.5;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: hsl(0, 0%, 100%);
+  z-index: 2;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+}
+main nav .logo {
+  display: block;
+  width: 139px;
+  height: 20px;
+  background-image: url("../images/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: "contain";
+}
+main nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main nav ul li {
+  transition: 0.3s ease;
+  padding: 2.5rem 0;
+  border-bottom: 5px solid transparent;
+}
+main nav ul li a {
+  color: hsl(233, 8%, 62%);
+}
+main nav ul li:hover {
+  border-color: hsl(136, 65%, 51%);
+}
+main nav ul li:hover a {
+  color: hsl(233, 26%, 24%);
+}
+main nav .navbarIcons {
+  display: none;
+}
+main nav .navbarIcons svg {
+  cursor: pointer;
+}
+main header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 0%, 98%);
+}
+main header .headerText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main header .headerText p {
+  line-height: 2rem;
+  color: hsl(233, 8%, 62%);
+}
+main header .headerText .btn {
+  align-self: flex-start;
+  margin-left: 15%;
+}
+main header .headerText h1 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+main header .headerText > *:not(.btn) {
+  width: 70%;
+}
+main header h1 {
+  font-size: calc(18px + 2vw);
+}
+main header .headerImg {
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-position: 0% 100%;
+  background-size: 120%;
+  width: 100%;
+  height: 36vw;
+}
+main header .headerImg img {
+  width: 100%;
+  margin-top: -7rem;
+}
+main #section1 {
+  background: hsl(220, 16%, 96%);
+  width: 100%;
+  padding: 6% 10%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #section1 .sectionHeader {
+  width: 50%;
+  align-self: flex-start;
+}
+main #section1 .sectionHeader h2 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: calc(18px + 1.5vw);
+}
+main #section1 .sectionHeader p {
+  color: hsl(233, 8%, 62%);
+  line-height: 2rem;
+}
+main #section1 ul {
+  width: 100%;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 5rem;
+}
+main #section1 ul li {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+main #section1 ul li h3 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+main #section1 ul li p {
+  color: hsl(233, 8%, 62%);
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+main #section2 {
+  width: 100%;
+  background: hsl(0, 0%, 98%);
+  padding: 5vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #section2 h1 {
+  width: 80%;
+  padding: 2rem 0;
+  font-size: calc(18px + 1.5vw);
+  color: hsl(233, 26%, 24%);
+}
+main #section2 ul {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main #section2 ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: calc(25% - 1rem);
+  gap: 5rem;
+  background: hsl(0, 0%, 100%);
+  padding-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+main #section2 ul li .img {
+  width: 100%;
+  height: 15vw;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+main #section2 ul li .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+main #section2 ul .cardBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+main #section2 ul .cardBody span {
+  color: hsl(233, 8%, 62%);
+  font-size: 16px;
+  font-family: 700;
+}
+main #section2 ul .cardBody a {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+  font-size: calc(18px + 0.3vw);
+  margin-bottom: 1rem;
+  transition: 0.4s ease;
+}
+main #section2 ul .cardBody a:hover {
+  color: hsl(192, 70%, 51%);
+}
+main #section2 ul .cardBody p {
+  color: hsl(233, 8%, 62%);
+}
+main footer {
+  background: hsl(233, 26%, 24%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main footer ul {
+  width: 80%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main footer ul li {
+  flex-grow: 1;
+}
+main footer ul li:last-child {
+  flex-grow: 2;
+}
+main footer ul li:not(:first-child, :last-child) a {
+  display: block;
+  margin-bottom: 1rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 300;
+  transition: 0.4s ease;
+}
+main footer ul li:not(:first-child, :last-child) a:hover {
+  color: hsl(192, 70%, 51%);
+}
+main footer ul li:first-child, main footer ul li:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+main footer ul li:last-child {
+  align-items: flex-end;
+}
+main footer ul li:last-child span {
+  color: hsl(233, 8%, 62%);
+  font-size: 16px;
+}
+main footer ul li:first-child .logo svg g:last-child path {
+  fill: hsl(0, 0%, 100%);
+}
+main footer ul li:first-child .s_Contact {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+main footer ul li:first-child .s_Contact a {
+  transition: 0.4s ease;
+}
+main footer ul li:first-child .s_Contact a:hover svg path {
+  fill: hsl(192, 70%, 51%);
+}
+main footer .attribution {
+  border-top: 1px solid hsl(192, 70%, 51%);
+  width: 100%;
+  text-align: center;
+  color: hsl(220, 16%, 96%);
+  font-size: 14px;
+  padding: 0.5rem 0;
+  font-weight: 100;
+}
+main footer .attribution a {
+  color: hsl(233, 8%, 62%);
+  font-size: 16px;
+  transition: 0.4s ease;
+}
+main footer .attribution a:hover {
+  color: hsl(192, 70%, 51%);
+}
+
+@media (max-width: 1400px) {
+  main #section1 ul {
+    gap: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  main nav {
+    padding: 0 3rem;
+    justify-content: space-between;
+  }
+  main nav ul {
+    gap: 1rem;
+  }
+  main header .headerText {
+    gap: 1rem;
+  }
+  main header .headerText h1 {
+    font-size: calc(18px + 1.5vw);
+  }
+  main header .headerImg {
+    height: 50vw;
+    background-position: 0% -150%;
+  }
+  main header .headerImg img {
+    margin-top: -6rem;
+  }
+  main #section1 .sectionHeader {
+    width: 80%;
+  }
+  main #section1 ul {
+    grid-template-columns: auto auto;
+  }
+  main #section1 ul li {
+    align-items: center;
+    text-align: center;
+  }
+  main #section2 {
+    padding-bottom: calc(5rem + 5vw);
+  }
+  main #section2 ul li {
+    width: calc(39vw - 0.5rem);
+  }
+  main #section2 ul li .img, main #section2 ul li .img img {
+    height: calc(29vw - 0.5rem);
+  }
+  main footer ul {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  main footer ul li {
+    width: 50%;
+  }
+  main footer ul li:first-child {
+    margin-bottom: 2rem;
+  }
+  main footer ul li:nth-child(3) {
+    margin-bottom: 2rem;
+  }
+  main footer ul li:first-child, main footer ul li:last-child {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  main footer ul li:first-child .logo, main footer ul li:first-child .btn, main footer ul li:last-child .logo, main footer ul li:last-child .btn {
+    margin-bottom: 1.5rem;
+  }
+  main footer ul li:first-child span, main footer ul li:last-child span {
+    text-align: center;
+  }
+  main footer ul li a {
+    text-align: center;
+  }
+}
+@media (max-width: 920px) {
+  main {
+    position: relative;
+  }
+  main nav {
+    padding: 2rem 1rem;
+    background: hsl(0, 0%, 98%);
+  }
+  main nav ul {
+    display: none;
+  }
+  main nav ul li {
+    padding: 0;
+    border: 0;
+  }
+  main nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 2rem;
+    top: 19rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 40vh;
+    background: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    animation-name: showMenu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  main nav .btn {
+    display: none;
+  }
+  main nav .navbarIcons {
+    display: block;
+  }
+  main nav .navbarIcons svg {
+    display: none;
+  }
+  main nav .navbarIcons svg.active {
+    display: block;
+  }
+  main header {
+    flex-direction: column-reverse;
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-position: center -10%;
+  }
+  main header .headerText {
+    text-align: center;
+    padding: 5vw;
+    align-items: center;
+    gap: 2rem;
+  }
+  main header .headerText h1 {
+    font-size: calc(18px + 2.5vw);
+  }
+  main header .headerText .btn {
+    align-self: center;
+    margin: 0;
+  }
+  main header .headerText > *:not(.btn) {
+    width: 100%;
+  }
+  main header .headerImg {
+    height: auto;
+    margin-top: -9rem;
+  }
+  main header .headerImg img {
+    margin: 0;
+  }
+  main #section1 {
+    padding: 15% 5%;
+  }
+  main #section1 .sectionHeader {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+  main #section1 .sectionHeader h2 {
+    font-size: calc(18px + 2vw);
+  }
+  main #section1 ul {
+    grid-template-columns: auto;
+    gap: 5rem;
+    padding: 5rem 0;
+  }
+  main #section1 ul li {
+    height: auto;
+    gap: 1.5rem;
+  }
+  main #section2 ul {
+    gap: calc(1rem + 5vw);
+  }
+  main #section2 ul li {
+    width: 100%;
+  }
+  main #section2 ul li .img, main #section2 ul li .img img {
+    height: 60vw;
+  }
+  main footer ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  main #section2 h1 {
+    width: 90%;
+  }
+  main #section2 ul {
+    width: 90%;
+  }
+  main footer ul li {
+    width: 100%;
+  }
+  main footer ul li .btn {
+    width: 100%;
+  }
+}
+@keyframes showMenu {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
