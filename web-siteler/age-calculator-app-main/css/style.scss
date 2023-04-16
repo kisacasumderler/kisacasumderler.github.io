@@ -99,6 +99,21 @@ main {
     }
 }
 
+footer {
+    text-align: center;
+    padding: .5rem 0;
+    color: $Smokeygrey;
+    font-size: 14px;
+    a {
+        color: black;
+        font-size: 16px;
+        transition: .3 ease;
+        color: $Purple;
+        &:hover {
+            color: $Lightred;
+        }
+    }
+}
 
 input {
     border: 2px solid $Lightgrey;
