@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
+$fFamily : 'GFS Didot', serif;
+$Fontsize : 16px;
+$mainBg : #000;
+$fcolor : #fff;
+$fcolor-gray : #adadad;
+$f-bg-gray : #4d4d4d;
+$btn-bg : #fbe850;
+$fpoppins : 'Poppins', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    letter-spacing: .1rem;
+    font-family: $fFamily;
+}
+
+p, span, div, a, ul, li {
+    font-size: $Fontsize;
+    color: $fcolor;
+}
+
+@mixin dflex($val,$val2:'',$val3:'') {
+    display: flex;
+    flex-direction: $val;
+    @if($val2!=''){
+        justify-content: $val2;
+    }
+    @if($val3!=''){
+        align-items: $val3;
+    }
+}
+
+@mixin animationDesc($val){
+    animation-name: $val;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.logo {
+    font-weight: 100;
+    letter-spacing: .3rem;
+}
+
+main {
+    background: $mainBg;
+    @include dflex(column,center,center);
+    gap: 3rem;
+    nav {
+        width: 80%;
+        @include dflex(row,space-between    ,center);
+        margin: 4rem 0;
+        .logo, ul li a , .buttons {
+            font-size: 20px;
+        }
+        ul {
+            @include dflex(row,center,center);
+            gap: 1rem;
+            li:last-child {
+                display: none;
+            }
+            li {
+                transition: .3s ease;
+                .hr {
+                    margin-top: .5rem;
+                    margin-bottom: -1rem;
+                    border-bottom: 2px solid transparent;
+                }
+                a {
+                    color: $fcolor-gray;
+                }
+                &:hover {
+                    border-color: $btn-bg;
+                    a {
+                        color: $btn-bg;
+                    }
+                    .hr {
+                        @include animationDesc(borderOn);
+                    }
+                }
+            }
+        }
+        .buttons {
+            .hamburger {
+                cursor: pointer;
+                display: none;
+            }
+        }
+    }
+    header {
+        width: 80%;
+        @include dflex(column,center,flex-start );
+        gap: 4rem;
+        .header-text {
+            width: 60%;
+            h1 {
+                font-size: calc(1rem + 3vw);
+                font-weight: lighter;
+                color: #fff;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-size: calc(1rem + .5vw);
+                color: $fcolor-gray;
+                font-family: $fpoppins;
+                font-weight: 200;
+            }
+        }
+        .logoS {
+            width: 100%;
+            @include dflex(row,space-between,center);
+        }
+    }
+    section {
+        width: 80%;
+    }
+    .section1 {
+        @include dflex(row,center,flex-start);
+        gap: 5vw;
+        padding: 5rem 0;
+        .col {
+            width: 100%;
+            @include dflex(column,center,flex-start);
+            gap: 1rem;
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+            h2 {
+                font-size: calc(1rem + 1.5vw);
+                font-weight: 100;
+            }
+            p {
+                font-size: calc(1rem + .3vw);
+                font-style: $fpoppins;
+                font-weight: 100;
+                color: $fcolor-gray;
+            }
+        }
+    }
+    .section2 {
+        width: 100%;
+        padding: 5% 10%;
+        background: $f-bg-gray;
+        p {
+            b {
+                font-size: calc(1rem + 2vw);
+                display: inline-block;
+                margin-bottom: 1.5rem;
+                color: $fcolor;
+            }
+            column-count: 2;
+            color: $fcolor-gray;
+            font-size: calc(1rem + .3vw);
+        }
+    }
+    .section3 {
+        @include dflex(column,center,flex-start);
+        gap: 1rem;
+        padding: 5vw 0;
+        .btn {
+            width: 180px;
+            text-align: center;
+        }
+        h4 {
+            font-size: calc(1rem + 1vw);
+            color: $fcolor;
+        }
+        p {
+            font-size: calc(1rem + .3vw);
+            color: $fcolor-gray;
+        }
+        h4, p {
+            width: 50%;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 1rem 10%;
+    background: $f-bg-gray;
+    @include dflex(row,space-between,center);
+    ul {
+        @include dflex(row,flex-end,center);
+        gap: 1rem;
+    }
+}
+.btn {
+    background: $btn-bg;
+    padding: 1rem 1.5rem;
+    color: $mainBg;
+    font-weight: bold;
+    border-radius: .1rem;
+    border: 1.5px solid transparent;
+    transition: .5s ease;
+    cursor: pointer;
+    &:hover {
+        background: $mainBg;
+        border-color: $btn-bg;
+        color: $btn-bg;
+    }
+}
+
+
+@media (max-width:1200px) {
+    main {
+        nav,header,section {
+            width: 90%;
+        }
+        .section2 {
+            padding: 10% 5%;
+        }
+        header {
+            .header-text {
+                width: 80%;
+            }
+        }
+    }
+    footer {
+        padding: 1rem 5%;
+    }
+    
+}
+
+@media (max-width:920px) {
+    main {
+        nav {
+            ul {
+                display: none;
+            }
+            .buttons {
+                .btn {
+                    display: none;
+                }
+                .hamburger {
+                    display: block;
+                }
+            }
+        }
+        header {
+            .logoS {
+                gap: 1.5rem;
+
+            }
+        }
+        .section3 {
+            h4, p {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    main {
+        header {
+            .logoS {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .header-text {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .section1 {
+            flex-direction: column;
+        }
+        .section2 {
+            p {
+                column-count: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        nav, header,section {
+            width: 95%;
+        }
+        .section2 {
+            padding: 10% 3%;
+        }
+        .section3 {
+            h4, p {
+                width: 80%;
+            }
+        }
+    }
+    footer {
+        padding: 1rem 3%;
+    }
+}
+
+@keyframes borderOn {
+    from {
+        border-color: $btn-bg;
+        width: 0;
+        margin-left: 50%;
+    }
+    to {
+        border-color: $btn-bg;
+        width: 100%;
+        margin-left: 0;
+    }
+  }

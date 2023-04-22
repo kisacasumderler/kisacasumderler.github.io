@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  letter-spacing: 0.1rem;
+  font-family: "GFS Didot", serif;
+}
+
+p, span, div, a, ul, li {
+  font-size: 16px;
+  color: #fff;
+}
+
+.logo {
+  font-weight: 100;
+  letter-spacing: 0.3rem;
+}
+
+main {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main nav {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0;
+}
+main nav .logo, main nav ul li a, main nav .buttons {
+  font-size: 20px;
+}
+main nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main nav ul li:last-child {
+  display: none;
+}
+main nav ul li {
+  transition: 0.3s ease;
+}
+main nav ul li .hr {
+  margin-top: 0.5rem;
+  margin-bottom: -1rem;
+  border-bottom: 2px solid transparent;
+}
+main nav ul li a {
+  color: #adadad;
+}
+main nav ul li:hover {
+  border-color: #fbe850;
+}
+main nav ul li:hover a {
+  color: #fbe850;
+}
+main nav ul li:hover .hr {
+  animation-name: borderOn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+main nav .buttons .hamburger {
+  cursor: pointer;
+  display: none;
+}
+main header {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+}
+main header .header-text {
+  width: 60%;
+}
+main header .header-text h1 {
+  font-size: calc(1rem + 3vw);
+  font-weight: lighter;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+main header .header-text p {
+  font-size: calc(1rem + 0.5vw);
+  color: #adadad;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+main header .logoS {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main section {
+  width: 80%;
+}
+main .section1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5vw;
+  padding: 5rem 0;
+}
+main .section1 .col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+main .section1 .col img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+main .section1 .col h2 {
+  font-size: calc(1rem + 1.5vw);
+  font-weight: 100;
+}
+main .section1 .col p {
+  font-size: calc(1rem + 0.3vw);
+  font-style: "Poppins", sans-serif;
+  font-weight: 100;
+  color: #adadad;
+}
+main .section2 {
+  width: 100%;
+  padding: 5% 10%;
+  background: #4d4d4d;
+}
+main .section2 p {
+  -moz-column-count: 2;
+       column-count: 2;
+  color: #adadad;
+  font-size: calc(1rem + 0.3vw);
+}
+main .section2 p b {
+  font-size: calc(1rem + 2vw);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+main .section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 5vw 0;
+}
+main .section3 .btn {
+  width: 180px;
+  text-align: center;
+}
+main .section3 h4 {
+  font-size: calc(1rem + 1vw);
+  color: #fff;
+}
+main .section3 p {
+  font-size: calc(1rem + 0.3vw);
+  color: #adadad;
+}
+main .section3 h4, main .section3 p {
+  width: 50%;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 10%;
+  background: #4d4d4d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: #fbe850;
+  padding: 1rem 1.5rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 0.1rem;
+  border: 1.5px solid transparent;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #000;
+  border-color: #fbe850;
+  color: #fbe850;
+}
+
+@media (max-width: 1200px) {
+  main nav, main header, main section {
+    width: 90%;
+  }
+  main .section2 {
+    padding: 10% 5%;
+  }
+  main header .header-text {
+    width: 80%;
+  }
+  footer {
+    padding: 1rem 5%;
+  }
+}
+@media (max-width: 920px) {
+  main nav ul {
+    display: none;
+  }
+  main nav .buttons .btn {
+    display: none;
+  }
+  main nav .buttons .hamburger {
+    display: block;
+  }
+  main header .logoS {
+    gap: 1.5rem;
+  }
+  main .section3 h4, main .section3 p {
+    width: 70%;
+  }
+}
+@media (max-width: 720px) {
+  main header .logoS {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main header .header-text {
+    width: 100%;
+    text-align: center;
+  }
+  main .section1 {
+    flex-direction: column;
+  }
+  main .section2 p {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
+@media (max-width: 600px) {
+  main nav, main header, main section {
+    width: 95%;
+  }
+  main .section2 {
+    padding: 10% 3%;
+  }
+  main .section3 h4, main .section3 p {
+    width: 80%;
+  }
+  footer {
+    padding: 1rem 3%;
+  }
+}
+@keyframes borderOn {
+  from {
+    border-color: #fbe850;
+    width: 0;
+    margin-left: 50%;
+  }
+  to {
+    border-color: #fbe850;
+    width: 100%;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
