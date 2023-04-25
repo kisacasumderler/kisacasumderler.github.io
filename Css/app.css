@@ -70,31 +70,27 @@ header {
   animation-iteration-count: infinite;
 }
 header .headerImg {
-  background-image: url("../img/Untitled-2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  mix-blend-mode: lig;
   width: 100%;
-  height: 15vw;
   display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: end;
-  padding: 0 5%;
-  box-shadow: 0px 0px 15px -5px #0a0a0a inset;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 5rem 0;
+  padding-bottom: 0;
+  background-image: linear-gradient(360deg, #242424, rgba(36, 36, 36, 0.6980392157), rgba(36, 36, 36, 0.4039215686));
 }
-header .headerImg div {
+header .headerImg .imgCircle {
   width: calc(5rem + 8vw);
   height: calc(5rem + 8vw);
   background: linear-gradient(95deg, #de4a6c, #9378a1);
   border-radius: 50%;
   padding: 0.3rem;
-  margin-bottom: -3rem;
   box-shadow: -5px 10px 30px -5px #0a0a0a;
   z-index: 2;
 }
-header .headerImg div img {
+header .headerImg .imgCircle img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -293,31 +289,12 @@ footer .footerIcerik .SendBtn:hover {
     width: calc((100% - 1rem) / 2);
   }
 }
-@media (max-width: 920px) {
-  header .headerImg {
-    height: 30vw;
-    justify-content: center;
-    align-items: center;
-  }
-  header .headerImg div {
-    margin: 0;
-  }
-  header .headerImg {
-    background-image: url("../img/Untitled-3.png");
-  }
-}
 @media (max-width: 720px) {
-  header .headerImg {
-    height: 50vw;
-  }
   .Kapsam li {
     width: 100%;
   }
   p, span, div, a, ul, li {
     font-size: 0.8rem;
-  }
-  header .headerImg {
-    background-image: url("../img/Untitled-4.png");
   }
 }
 @keyframes aHover {

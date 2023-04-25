@@ -130,26 +130,22 @@ header {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     .headerImg {
-        background-image: url("../img/Untitled-2.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        mix-blend-mode: lig;
         width: 100%;
-        height: 15vw;
         display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: end;
-        padding: 0 5%;
-        box-shadow: 0px 0px 15px -5px $bgBlack inset;
-        div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 5rem 0;
+        padding-bottom: 0;
+        background-image: linear-gradient(360deg ,#242424, #242424b2, #24242467);
+        .imgCircle {
             width: calc(5rem + 8vw);
             height: calc(5rem + 8vw);
             background: $colorMix;
             border-radius: 50%;
             padding: .3rem;
-            margin-bottom: -3rem;
             box-shadow: -5px 10px 30px -5px $bgBlack;
             z-index: 2;
             img {
@@ -166,7 +162,7 @@ header {
 }
 
 .headerText {
-    background: $bgGray;
+    background: #242424;
     width: 100%;
     padding: 1.5rem 10%;
     z-index: 1;
@@ -352,30 +348,10 @@ footer {
 }
 
 @media(max-width:920px) {
-    header {
-        .headerImg {
-                height: 30vw;
-                justify-content: center;
-                align-items: center;
-                div {
-                    margin: 0;
-                }
-                }
-            }
-    header {
-        .headerImg {
-            background-image: url("../img/Untitled-3.png");
-            }
-        }
+
 }
 
 @media(max-width:720px) {
-    // header
-    header {
-        .headerImg {
-                height: 50vw;
-                }
-            } 
     // boxlar 
     .Kapsam {
         li {
@@ -385,11 +361,6 @@ footer {
     p, span, div, a, ul, li {
         font-size: .8rem;
     }
-    header {
-        .headerImg {
-            background-image: url("../img/Untitled-4.png");
-            }
-        }
 }
 
 @keyframes aHover {
