@@ -101,16 +101,8 @@ $(window).ready(function () {
 
     const scrollKontrol = setInterval(Hesaplat, 5);
 
-    function checkWidth() {
-        scrollKontrol = setInterval(Hesaplat,5);
-        if(p_count == 'none') {
-            clearInterval(scrollKontrol);
-        }
-    }
-
     if(p_count== 'none') {
         clearInterval(scrollKontrol);
     }
 
-    $(window).resize(checkWidth);
 });
