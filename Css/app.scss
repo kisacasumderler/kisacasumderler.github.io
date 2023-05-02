@@ -30,6 +30,10 @@ $ffheader : 'Kanit', sans-serif;
     letter-spacing: .05rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 p, span, div, a, ul, li {
     font-family: $ffparagraph;
     font-size: 1rem;
@@ -108,13 +112,52 @@ p {
     background: $bgBlack; 
   }
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .Kapsam {
+    padding-top: 60px;
+  } 
 
 main {
     background: $bgBlack;
     width: 100%;
-    min-height: 800px;
     @include DFlex();
     justify-content: flex-start;
+}
+
+main {
+    nav {
+        margin-bottom: 5rem;
+        width: 100%;
+        background: linear-gradient(90deg,$Gradient1,$Gradient2);
+        padding-bottom: .5rem;
+        z-index: 3;
+        ul {
+            width: 100%;
+            @include DFlex(1,1);
+            gap: 1rem;
+            padding: 1rem;
+            background: $bgGray;
+            li {
+                a {
+                    background: linear-gradient($Gradient1, $Gradient2);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 18px;
+                    font-weight: bold;
+                    transition: .4s ease;
+
+                    &:hover {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // header 
@@ -123,41 +166,72 @@ header {
     width: 100%;
     background: $colorMix;
     padding-top: .2rem;
-    padding-bottom: 1.5rem;
-    border-radius: 0 0  1rem 1rem;
     // animation 
     animation-name: hBg;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     .headerImg {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-        padding: 5rem 0;
-        padding-bottom: 0;
         background-image: linear-gradient(360deg ,#242424, #242424b2, #24242467);
-        .imgCircle {
-            width: calc(5rem + 8vw);
-            height: calc(5rem + 8vw);
-            background: $colorMix;
-            border-radius: 50%;
-            padding: .3rem;
-            box-shadow: -5px 10px 30px -5px $bgBlack;
-            z-index: 2;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-            }
-        }
     }
     .headerIcerik {
         border-radius: 0 0  1.5rem 1.5rem;
         @include DFlex();
+    }
+}
+
+#AboutHeader {
+    padding-top: 1rem;
+    div {
+        background-image: url('https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        mix-blend-mode: darken;
+        width: 100%;
+        height: 35vh;
+        border-radius: 1rem 1rem 0 0;
+        @include DFlex(0);
+        font-size: calc(18px + 5vw);
+        color: $bgGray;
+    }
+}
+
+.AllProject {
+    div {
+        background-image: linear-gradient(360deg ,#242424, #242424e3) !important;
+        color: $textGray !important;
+
+        p {
+            width: 90%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.headerImg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 10rem 0;
+    padding-bottom: 0;
+    .imgCircle {
+        width: calc(5rem + 8vw);
+        height: calc(5rem + 8vw);
+        background: $colorMix;
+        border-radius: 50%;
+        padding: .3rem;
+        box-shadow: -5px 10px 30px -5px $bgBlack;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -166,6 +240,7 @@ header {
     width: 100%;
     padding: 1.5rem 10%;
     z-index: 1;
+    text-align: center;
     h1 {
         margin-bottom: 1.5rem;
       }
@@ -176,33 +251,77 @@ header {
 }
 // section 
 
-section {
-    width: 100%;
+section#contact {
+    width: 95%;
     padding: 1rem;
+    margin-bottom: 2rem;
+    h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        text-align: center;
+        background: linear-gradient($Gradient1, $Gradient2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
     .icons {
         width: 100%;
-        @include DFlex(1,2,0);
+        @include DFlex(1,0,0);
         gap: 1rem;
+    }
+}
+
+section#about {
+    width: 95%;
+    background: $bgGray;
+    border-radius: 1rem;
+    border: 5px solid $Gradient1;
+    padding: 5rem 3rem;
+    text-align: center;
+    margin: calc(5vw + 1rem) 0;
+    @include DFlex(0);
+    gap: 1.5rem;
+    p {
+        font-family: $ffheader;
+        background: linear-gradient($Gradient1, $Gradient2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 18px;
+    }
+}
+
+#pages {
+    display: flex;
+    width: 100%;
+    iframe {
+        width: 100%;
+        height: auto;
+        
     }
 }
 // boxlar 
 
 .Kapsam {
     background: $bgBlack;
+    height: 100vh;
     overflow: hidden;
-    width: 90%;
+    width: 95%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-flow: column wrap;
     gap: 1rem;
     padding: 1rem;
+    margin-bottom: 5rem;
 }
 
 .Kapsam li {
     background: $bgGray;
     box-shadow: 1px 1px 5px $bgGray;
-    width: calc((100% - 2rem) / 3);
+    width: calc((100% / 4) - 1rem);
     min-height: 250px;
     border-radius: 1rem;
 }
@@ -339,16 +458,21 @@ footer {
 
 // responsive 
 
+
 @media(max-width:1200px) {
     .Kapsam {
         li {
-            width: calc((100% - 1rem) / 2);
+            width: calc((100% / 3) - 1rem);
         }
     }
 }
 
-@media(max-width:920px) {
-
+@media(max-width:990px) {
+    .Kapsam {
+        li {
+            width: calc((100% / 2) - 1rem);
+        }
+    }
 }
 
 @media(max-width:720px) {
