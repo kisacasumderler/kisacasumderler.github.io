@@ -50,6 +50,24 @@ p {
     line-height: 2rem;
 }
 
+#upButton {
+    position: fixed;
+    display: none;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    fill: $Gradient1;
+    cursor: pointer;
+    transition: .4s ease;
+    &:hover {
+        animation-name: aHover;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
 @mixin DFlex($val:0,$val2:0, $val3:0){
     display: flex;
     @if($val==0){
