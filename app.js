@@ -73,7 +73,7 @@ $(window).ready(function () {
             let siteUrl = value.siteUrl;
 
             if(p_count!=='full') {
-                if(key<8) {
+                if(key<6) {
                     $('.Kapsam').append(Card(dataId, imgName, baslik, aciklama, siteUrl, arrowSvg, repUrl, bookBookmark));
                 }
             }else {
@@ -102,7 +102,14 @@ $(window).ready(function () {
     const scrollKontrol = setInterval(Hesaplat, 5);
 
     function checkWidth() {
-        scrollKontrol = setInterval(Hesaplat,5)
+        scrollKontrol = setInterval(Hesaplat,5);
+        if(p_count == 'none') {
+            clearInterval(scrollKontrol);
+        }
+    }
+
+    if(p_count== 'none') {
+        clearInterval(scrollKontrol);
     }
 
     $(window).resize(checkWidth);
